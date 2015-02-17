@@ -298,3 +298,3148 @@ DMixer fading: 16.66666
 DMixer fading: 83.33334
 DMixer fading: 8.333331
 DMixer fading: 91.66667
+NLooking for mplayer...
+GCreating config file: /home/apexys/.mplayer/config
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController: Idle
+IController: Running
+GCurrent action: Idle
+GNext action: Song
+GCurrent action: Song
+GNext action: Song
+DMixer fading: 100
+DMixer fading: 91.66666
+DMixer fading: 100
+DMixer fading: 83.33333
+DMixer fading: 74.99999
+DMixer fading: 66.66666
+DMixer fading: 58.33332
+DMixer fading: 49.99999
+DMixer fading: 41.66666
+DMixer fading: 33.33333
+DMixer fading: 25
+DMixer fading: 16.66666
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController: Idle
+IController: Running
+GCurrent action: Idle
+GNext action: Song
+GCurrent action: Song
+GNext action: Song
+DMixer fading: 23
+DMixer fading: 30
+DMixer fading: 37
+DMixer fading: 44
+DMixer fading: 51
+DMixer fading: 58
+DMixer fading: 65
+DMixer fading: 72
+DMixer fading: 79
+DMixer fading: 86
+DMixer fading: 93
+DMixer fading: 100
+NSkipping current action
+GCurrent action: Song
+GNext action: Song
+DMixer fading: 100
+DMixer fading: 91.66666
+DMixer fading: 100
+DMixer fading: 83.33333
+DMixer fading: 74.99999
+DMixer fading: 66.66666
+DMixer fading: 58.33332
+DMixer fading: 49.99999
+DMixer fading: 41.66666
+DMixer fading: 33.33333
+DMixer fading: 25
+DMixer fading: 16.66666
+DMixer fading: 8.333331
+DMixer fading: 0
+DMixer fading: 91.66666
+DMixer fading: 8.333333
+DMixer fading: 83.33333
+DMixer fading: 16.66667
+DMixer fading: 74.99999
+DMixer fading: 25
+DMixer fading: 66.66666
+DMixer fading: 33.33333
+DMixer fading: 58.33332
+DMixer fading: 41.66666
+DMixer fading: 49.99999
+DMixer fading: 50
+DMixer fading: 41.66666
+DMixer fading: 58.33333
+DMixer fading: 33.33333
+DMixer fading: 66.66666
+DMixer fading: 25
+DMixer fading: 75
+DMixer fading: 16.66666
+DMixer fading: 83.33334
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GCurrent action: Idle
+GNext action: Song
+Nnow: Fading
+EController Action was Idle
+GCurrent action: Song
+GNext action: Song
+Nnow: Fading
+DMixer fading: 84.41666
+DMixer fading: 85.83333
+DMixer fading: 87.24999
+DMixer fading: 88.66666
+DMixer fading: 90.08332
+DMixer fading: 91.49998
+DMixer fading: 92.91665
+DMixer fading: 94.33331
+DMixer fading: 95.74998
+DMixer fading: 97.16664
+DMixer fading: 98.58331
+DMixer fading: 99.99997
+DMixer fading: 100
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+DMixer fading: 100
+GNext action: Song
+Nnow: Fading
+DMixer fading: 91.66666
+DMixer fading: 8.333333
+DMixer fading: 83.33333
+DMixer fading: 16.66667
+DMixer fading: 74.99999
+DMixer fading: 25
+DMixer fading: 66.66666
+DMixer fading: 33.33333
+DMixer fading: 58.33332
+DMixer fading: 41.66666
+DMixer fading: 49.99999
+DMixer fading: 50
+DMixer fading: 41.66666
+DMixer fading: 58.33333
+DMixer fading: 33.33333
+DMixer fading: 66.66666
+DMixer fading: 25
+DMixer fading: 75
+DMixer fading: 16.66666
+DMixer fading: 83.33334
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+Nnow: Fading
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+DMixer fading: 84.41666
+DMixer fading: 85.83333
+GNext action: Song
+DMixer fading: 87.24999
+DMixer fading: 88.66666
+DMixer fading: 90.08332
+DMixer fading: 91.49998
+DMixer fading: 92.91665
+DMixer fading: 94.33331
+DMixer fading: 95.74998
+DMixer fading: 97.16664
+DMixer fading: 98.58331
+DMixer fading: 99.99997
+DMixer fading Done: 100
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+DMixer fading: 8.333333
+DMixer fading: 16.66667
+GNext action: Song
+DMixer fading: 25
+DMixer fading: 33.33333
+DMixer fading: 41.66666
+DMixer fading: 50
+DMixer fading: 58.33333
+DMixer fading: 66.66666
+DMixer fading: 75
+DMixer fading: 83.33334
+DMixer fading: 91.66667
+DMixer fading Done: 100
+Nnow: Fading
+DMixer fading: 91.66666
+DMixer fading Done: 100
+DMixer fading: 83.33333
+DMixer fading: 74.99999
+DMixer fading: 66.66666
+DMixer fading: 58.33332
+DMixer fading: 49.99999
+DMixer fading: 41.66666
+DMixer fading: 33.33333
+DMixer fading: 25
+DMixer fading: 16.66666
+DMixer fading: 8.333331
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DMixer fading Done: 0
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+DMixer fading: 8.333333
+DMixer fading: 16.66667
+GNext action: Song
+DMixer fading: 25
+DMixer fading: 33.33333
+DMixer fading: 41.66666
+DMixer fading: 50
+DMixer fading: 58.33333
+DMixer fading: 66.66666
+DMixer fading: 75
+DMixer fading: 83.33334
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+DMixer fading: 91.66667
+DMixer fading Done: 100
+GNext action: Song
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+Nnow: Fading
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading: 38.33333
+DMixer fading: 49.58333
+DMixer fading: 57.91666
+DMixer fading: 66.25
+DMixer fading: 74.58334
+DMixer fading: 82.91667
+DMixer fading: 91.25001
+DMixer fading: 99.58334
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DMixer fading Done: 100
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+DMixer fading Done: 100
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+DMixer fading: 0
+DMixer fading: 0
+GNext action: Song
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 0
+DMixer fading: 24
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+DMixer fading: 0
+DMixer fading: 8.333333
+GNext action: Song
+DMixer fading: 16.66667
+DMixer fading: 25
+DMixer fading: 33.33333
+DMixer fading: 41.66666
+DMixer fading: 49.99999
+DMixer fading: 58.33332
+DMixer fading: 66.66666
+DMixer fading: 74.99999
+DMixer fading: 83.33333
+DMixer fading: 91.66666
+DMixer fading Done: 99.99999
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+DMixer fading Done: 100
+GNext action: Song
+Nnow: Fading
+DMixer fading: 100
+DMixer fading Done: 100
+DMixer fading: 91.66666
+DMixer fading: 83.33332
+DMixer fading: 74.99998
+DMixer fading: 66.66664
+DMixer fading: 58.33331
+DMixer fading: 49.99998
+DMixer fading: 41.66665
+DMixer fading: 33.33332
+DMixer fading: 24.99999
+DMixer fading: 16.66666
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DMixer fading: 0
+DMixer fading: 8.333333
+GNext action: Song
+DMixer fading: 16.66667
+DMixer fading: 25
+DMixer fading: 33.33333
+DMixer fading: 41.66666
+DMixer fading: 49.99999
+DMixer fading: 58.33332
+DMixer fading: 66.66666
+DMixer fading: 74.99999
+DMixer fading: 83.33333
+DMixer fading: 91.66666
+DMixer fading Done: 99.99999
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+NFading 100 to 0
+Nnow: Fading
+NFading 0 to 100
+DMixer fading: 100
+DMixer fading: 0
+DMixer fading: 91.66666
+DMixer fading: 8.333333
+DMixer fading: 83.33332
+DMixer fading: 16.66667
+DMixer fading: 74.99998
+DMixer fading: 25
+DMixer fading: 66.66664
+DMixer fading: 33.33333
+DMixer fading: 58.33331
+DMixer fading: 41.66666
+DMixer fading: 49.99998
+DMixer fading: 49.99999
+DMixer fading: 41.66665
+DMixer fading: 58.33332
+DMixer fading: 33.33332
+DMixer fading: 66.66666
+DMixer fading: 24.99999
+DMixer fading: 74.99999
+DMixer fading: 16.66666
+DMixer fading: 83.33333
+NSkipping current action
+GCurrent action: Song
+DDispose: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+NFading 0 to 0
+Nnow: Fading
+NFading 0 to 100
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NSkipping current action
+GCurrent action: Song
+DDispose: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+NFading 0 to 0
+Nnow: Fading
+NFading 0 to 100
+NSkipping current action
+GCurrent action: Song
+DDispose: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+NFading 0 to 0
+Nnow: Fading
+NFading 0 to 100
+NSkipping current action
+GCurrent action: Song
+DDispose: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+Nnow: Fading
+NFading 0 to 100
+GNext action: Jingle
+NSkipping current action
+GCurrent action: Jingle
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+NFading 0 to 0
+Nnow: Fading
+NFading 0 to 100
+NFading 0 to 0
+Nnow: Fading
+NSkipping current action
+NFading 0 to 100
+GCurrent action: Song
+GNext action: Song
+DDispose: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NFading 0 to 0
+Nnow: Fading
+NFading 0 to 100
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DBlubb
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+GNext action: Song
+DMixer fading: 0
+DMixer fading: 8.333333
+DMixer fading: 16.66667
+DMixer fading: 25
+DMixer fading: 33.33333
+DMixer fading: 41.66666
+DMixer fading: 49.99999
+DMixer fading: 58.33332
+DMixer fading: 66.66666
+DMixer fading: 74.99999
+DMixer fading: 83.33333
+DMixer fading: 91.66666
+DMixer fading Done: 99.99999
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DAdded Campusradio IndieWelle 2.mp3
+DAdded Campusradio IndieWelle Kiel.mp3
+DAdded Campusradio IndieWelle.mp3
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DAdded Detlef.mp3
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DAdded Nächster Halt.mp3
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DMixer fading: 0
+GNext action: Song
+DMixer fading: 8.333333
+DMixer fading: 16.66667
+DMixer fading: 25
+DMixer fading: 33.33333
+DMixer fading: 41.66666
+DMixer fading: 49.99999
+DMixer fading: 58.33332
+DMixer fading: 66.66666
+DMixer fading: 74.99999
+DMixer fading: 83.33333
+DMixer fading: 91.66666
+DMixer fading Done: 99.99999
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+NFading 100 to 0
+Nnow: Fading
+NFading 0 to 100
+DMixer fading Done: 0
+DMixer fading: 0
+DMixer fading: 8.333333
+DMixer fading: 16.66667
+DMixer fading: 25
+DMixer fading: 33.33333
+DMixer fading: 41.66666
+DMixer fading: 49.99999
+DMixer fading: 58.33332
+DMixer fading: 66.66666
+DMixer fading: 74.99999
+DMixer fading: 83.33333
+DMixer fading: 91.66666
+DMixer fading Done: 99.99999
+NSkipping current action
+GCurrent action: Song
+DDispose: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+Nnow: Fading
+NFading 0 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 100 to 100
+DMixer fading Done: 100
+GNext action: Song
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DVolume change! 100
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DVolume change! 0
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DVolume change! 0
+DAdded Campusradio IndieWelle 2.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle Kiel.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle.mp3
+DVolume change! 0
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DVolume change! 0
+DAdded Detlef.mp3
+DVolume change! 0
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DVolume change! 0
+DAdded Hallo Kollegen.mp3
+DVolume change! 0
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DVolume change! 0
+DAdded Nächster Halt.mp3
+DVolume change! 0
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DVolume change! 0
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+DVolume change! 0
+NFading 0 to 100
+DMixer fading: 0
+DVolume change! 8.333333
+GNext action: Song
+DMixer fading: 8.333333
+DVolume change! 16.66667
+DMixer fading: 16.66667
+DVolume change! 25
+DMixer fading: 25
+DVolume change! 33.33333
+DMixer fading: 33.33333
+DVolume change! 41.66666
+DMixer fading: 41.66666
+DVolume change! 49.99999
+DMixer fading: 49.99999
+DVolume change! 58.33332
+DMixer fading: 58.33332
+DVolume change! 66.66666
+DMixer fading: 66.66666
+DVolume change! 74.99999
+DMixer fading: 74.99999
+DVolume change! 83.33333
+DMixer fading: 83.33333
+DVolume change! 91.66666
+DMixer fading: 91.66666
+DVolume change! 99.99999
+DMixer fading Done: 99.99999
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+DVolume change! 100
+NFading 100 to 100
+DMixer fading Done: 100
+DVolume change! 100
+GNext action: News
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+NSkipping current action
+GCurrent action: News
+Nnow: Fading
+DVolume change! 100
+NFading 100 to 100
+DMixer fading Done: 100
+DVolume change! 100
+GNext action: Jingle
+DVolume change! 100
+DVolume change! 100
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DVolume change! 100
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DVolume change! 0
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DVolume change! 0
+DAdded Campusradio IndieWelle 2.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle Kiel.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle.mp3
+DVolume change! 0
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DVolume change! 0
+DAdded Detlef.mp3
+DVolume change! 0
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DVolume change! 0
+DAdded Hallo Kollegen.mp3
+DVolume change! 0
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DVolume change! 0
+DAdded Nächster Halt.mp3
+DVolume change! 0
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DVolume change! 0
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: News
+GCurrent action: News
+Nnow: Fading
+DVolume change! 0
+NFading 0 to 100
+DMixer fading: 0
+DVolume change! 8.333333
+DMixer fading: 8.333333
+GNext action: Jingle
+DVolume change! 16.66667
+DMixer fading: 16.66667
+DVolume change! 25
+DMixer fading: 25
+DVolume change! 33.33333
+DMixer fading: 33.33333
+DVolume change! 41.66666
+DMixer fading: 41.66666
+DVolume change! 49.99999
+DMixer fading: 49.99999
+DVolume change! 58.33332
+DMixer fading: 58.33332
+DVolume change! 66.66666
+DMixer fading: 66.66666
+DVolume change! 74.99999
+DMixer fading: 74.99999
+DVolume change! 83.33333
+DMixer fading: 83.33333
+DVolume change! 91.66666
+DMixer fading: 91.66666
+DVolume change! 99.99999
+DMixer fading Done: 99.99999
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+NSkipping current action
+GCurrent action: Jingle
+Nnow: Fading
+NFading 0 to 100
+DVolume change! 100
+DMixer fading Done: 100
+DVolume change! 100
+GNext action: Song
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: No process to kill.
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DVolume change! 100
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DVolume change! 0
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DVolume change! 0
+DAdded Campusradio IndieWelle 2.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle Kiel.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle.mp3
+DVolume change! 0
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DVolume change! 0
+DAdded Detlef.mp3
+DVolume change! 0
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DVolume change! 0
+DAdded Hallo Kollegen.mp3
+DVolume change! 0
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DVolume change! 0
+DAdded Nächster Halt.mp3
+DVolume change! 0
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DVolume change! 0
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+DVolume change! 0
+NFading 0 to 100
+DMixer fading: 0
+DVolume change! 8.333333
+GNext action: Song
+DMixer fading: 8.333333
+DVolume change! 16.66667
+DMixer fading: 16.66667
+DVolume change! 25
+DMixer fading: 25
+DVolume change! 33.33333
+DMixer fading: 33.33333
+DVolume change! 41.66666
+DMixer fading: 41.66666
+DVolume change! 49.99999
+DMixer fading: 49.99999
+DVolume change! 58.33332
+DMixer fading: 58.33332
+DVolume change! 66.66666
+DMixer fading: 66.66666
+DVolume change! 74.99999
+DMixer fading: 74.99999
+DVolume change! 83.33333
+DMixer fading: 83.33333
+DVolume change! 91.66666
+DMixer fading: 91.66666
+DVolume change! 99.99999
+DMixer fading Done: 99.99999
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+DVolume change! 100
+NFading 100 to 100
+DMixer fading Done: 100
+DVolume change! 100
+GNext action: Song
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+NLooking for mplayer...
+GMPlayer2 2.0-728-g2c378c7-2ubuntu3 (C) 2000-2012 MPlayer Team
+DEnvironment: /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug
+IController changed state to: Initializing
+DVolume change! 100
+DAdded Mr. Bill - Settling For Mediocrity-182581435.mp3
+DVolume change! 0
+DAdded Seven Lions - Lose Myself ft. Lynn Gunn (Original Mix)-188343198.mp3
+ILoaded 2 items from /home/apexys/content/songs
+DVolume change! 0
+DAdded Campusradio IndieWelle 2.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle Kiel.mp3
+DVolume change! 0
+DAdded Campusradio IndieWelle.mp3
+DVolume change! 0
+DAdded Campusradio Leichter Zu Empfangen Als Bafög.mp3
+DVolume change! 0
+DAdded Detlef.mp3
+DVolume change! 0
+DAdded Guten Tag Studenten (Sonneborn).mp3
+DAdded Hallo Kollegen.mp3
+DVolume change! 0
+DAdded Hier ist das erste Kieler Campusradio.mp3
+DVolume change! 0
+DAdded Nächster Halt.mp3
+DVolume change! 0
+DAdded Wenn sich zwei Menschen.mp3
+ILoaded 10 items from /home/apexys/content/jingles
+DVolume change! 0
+DAdded Campusradio News Neutral.mp3
+ILoaded 1 items from /home/apexys/content/news
+IController changed state to: Idle
+IController changed state to: Running
+GNext action: Song
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DVolume change! 0
+DMixer fading: 8.333333
+DVolume change! 8.333333
+GNext action: Song
+DMixer fading: 16.66667
+DVolume change! 16.66667
+DMixer fading: 25
+DVolume change! 25
+DMixer fading: 33.33333
+DVolume change! 33.33333
+DMixer fading: 41.66666
+DVolume change! 41.66666
+DMixer fading: 50
+DVolume change! 50
+DMixer fading: 58.33333
+DVolume change! 58.33333
+DMixer fading: 66.66666
+DVolume change! 66.66666
+DMixer fading: 75
+DVolume change! 75
+DMixer fading: 83.33334
+DVolume change! 83.33334
+DMixer fading: 91.66667
+DVolume change! 91.66667
+DMixer fading Done: 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+DVolume change! 100
+NFading 0 to 100
+DMixer fading: 8.333333
+DVolume change! 8.333333
+DMixer fading: 16.66667
+GNext action: Song
+DVolume change! 16.66667
+DMixer fading: 25
+DVolume change! 25
+DMixer fading: 33.33333
+DVolume change! 33.33333
+DMixer fading: 41.66666
+DVolume change! 41.66666
+DMixer fading: 50
+DVolume change! 50
+DMixer fading: 58.33333
+DVolume change! 58.33333
+DMixer fading: 66.66666
+DVolume change! 66.66666
+DMixer fading: 75
+DVolume change! 75
+DMixer fading: 83.33334
+DVolume change! 83.33334
+DMixer fading: 91.66667
+DVolume change! 91.66667
+DMixer fading Done: 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+NFading 0 to 100
+DVolume change! 100
+DMixer fading: 8.333333
+DVolume change! 8.333333
+DMixer fading: 16.66667
+GNext action: Song
+DVolume change! 16.66667
+DMixer fading: 25
+DVolume change! 25
+DMixer fading: 33.33333
+DVolume change! 33.33333
+DMixer fading: 41.66666
+DVolume change! 41.66666
+DMixer fading: 50
+DVolume change! 50
+DMixer fading: 58.33333
+DVolume change! 58.33333
+DMixer fading: 66.66666
+DVolume change! 66.66666
+DMixer fading: 75
+DVolume change! 75
+DMixer fading: 83.33334
+DVolume change! 83.33334
+DMixer fading: 91.66667
+DVolume change! 91.66667
+DMixer fading Done: 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+NSkipping current action
+GCurrent action: Song
+Nnow: Fading
+DVolume change! 100
+NFading 0 to 100
+DMixer fading: 8.333333
+DVolume change! 8.333333
+DMixer fading: 16.66667
+GNext action: Song
+DVolume change! 16.66667
+DMixer fading: 25
+DVolume change! 25
+DMixer fading: 33.33333
+DVolume change! 33.33333
+DMixer fading: 41.66666
+DVolume change! 41.66666
+DMixer fading: 50
+DVolume change! 50
+DMixer fading: 58.33333
+DVolume change! 58.33333
+DMixer fading: 66.66666
+DVolume change! 66.66666
+DMixer fading: 75
+DVolume change! 75
+DMixer fading: 83.33334
+DVolume change! 83.33334
+DMixer fading: 91.66667
+DVolume change! 91.66667
+DMixer fading Done: 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DVolume change! 100
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.
+DDeconstructor: MPlayer was already dead: Write fault on path /home/apexys/RadioStuffs/RadioController/RadioController/bin/Debug/[Unknown]
+DDeconstructor: MPlayer was already dead: The object was used after being disposed.

@@ -27,6 +27,7 @@ namespace RadioController
 		}
 
 		~Logger(){
+			logToFile = false;
 			strw.Flush ();
 			strw.Close ();
 		}
@@ -73,8 +74,7 @@ namespace RadioController
 			writeLine ('E' + message);
 		}
 
-		public static void LogDebug (string message)
-		{
+		public static void LogDebug (string message) {
 			if (logDebugMessages) {
 				Console.ForegroundColor = ConsoleColor.DarkGray;
 				Console.WriteLine(getTimeString() + message);

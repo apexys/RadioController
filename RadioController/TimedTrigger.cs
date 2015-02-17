@@ -9,7 +9,8 @@ namespace RadioController
 		int lastTrigger;
 		int lastMinute;
 		bool previousTriggerChanged;
-		public TimedTrigger ()
+
+		public TimedTrigger()
 		{
 			MinuteTriggers = new List<int>();
 			lastTrigger = -1;
@@ -17,35 +18,39 @@ namespace RadioController
 			previousTriggerChanged = false;
 		}
 
-		public bool PreviousTriggerChanged{
-			get{
+		public bool PreviousTriggerChanged {
+			get {
 				bool temp = previousTriggerChanged;
 				previousTriggerChanged = false;
 				return temp;
 			}
 		}
 
-		public void addMinuteTrigger(int minute){
+		public void addMinuteTrigger(int minute) {
 			if (minute < 0 || minute > 59) {
-				throw new ArgumentOutOfRangeException ("minute has to be larger or equal to zero and lower than 60");
+				throw new ArgumentOutOfRangeException("minute has to be larger or equal to zero and lower than 60");
 			} else {
-				MinuteTriggers.Add (minute);
-				MinuteTriggers.Sort ();
+				MinuteTriggers.Add(minute);
+				MinuteTriggers.Sort();
 			}
 		}
 
-		public void checkTriggers(){
+		public void checkTriggers() {
 			int minute = DateTime.Now.Minute;
-			for (int i = 0; i < MinuteTriggers.Count; i++) {
-				if ((MinuteTriggers [i] == minute) && (lastMinute != minute)) {
-					lastTrigger = MinuteTriggers [i];
-					previousTriggerChanged = true;
-					break;
+			if (lastMinute != minute) {
+				for (int i = 0; i < MinuteTriggers.Count; i++) {
+					// TODO: redo this with a Queue and checking the whole timespan passed
+					if (MinuteTriggers[i] == minute) {
+						lastTrigger = MinuteTriggers[i];
+						previousTriggerChanged = true;
+						break;
+					}
 				}
+				lastMinute = minute;
 			}
 		}
 
-		public int getLastTrigger(){
+		public int getLastTrigger() {
 			return lastTrigger;
 		}
 	}

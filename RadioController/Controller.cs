@@ -7,9 +7,11 @@ namespace RadioController
 {
 	public class Controller
 	{
+		// TODO: Config for Fading time
 		const int SecondsSpentFading = 3;
 		bool islive;
 
+		/*
 		bool isLive {
 			get {
 				return islive;
@@ -18,6 +20,7 @@ namespace RadioController
 				islive = value;
 			}
 		}
+		*/
 
 		public enum ControllerAction
 		{
@@ -28,7 +31,7 @@ namespace RadioController
 			Live
 		}
 
-		public string ControllerActionToString (ControllerAction action)
+		string ControllerActionToString (ControllerAction action)
 		{
 			switch (action) {
 			case ControllerAction.Idle:
@@ -56,112 +59,105 @@ namespace RadioController
 
 		Mplayer currentElement;
 		Mplayer lastElement;
+
 		ControllerAction currentState;
 		ControllerAction nextState;
+
 		MediaFolder songs;
 		MediaFolder jingles;
 		MediaFolder news;
+
 		TimedTrigger jingleTrigger;
 		TimedTrigger newsTrigger;
+
 		Timer controller_timer;
 
 		Mixer mixer;
 
-		String liveURL;
-		HTTPServer hserver;
+		string liveURL;
+		HTTPServer toggleServer;
 
-		public Controller (string songFolder, string jingleFolder, string newsFolder, TimedTrigger jingleTrigger, TimedTrigger newsTrigger, string liveURL)
-		{
+		public Controller (string songFolder, string jingleFolder, string newsFolder, TimedTrigger jingleTrigger, TimedTrigger newsTrigger, string liveURL) {
 			//Basic state
-			changeState ("Initializing");
+			changeState("Initializing");
 
-			mixer = new Mixer ();
+			mixer = new Mixer();
 
-			controller_timer = new Timer (500);
+			controller_timer = new Timer(500);
 			controller_timer.Elapsed += HandleClockEvent;
 
-			this.songs = new MediaFolder (songFolder);
-			this.jingles = new MediaFolder (jingleFolder);
-			this.news = new MediaFolder (newsFolder);
+			this.songs   = new MediaFolder(songFolder);
+			this.jingles = new MediaFolder(jingleFolder);
+			this.news    = new MediaFolder(newsFolder);
 
-			this.newsTrigger = newsTrigger;
+			this.newsTrigger   = newsTrigger;
 			this.jingleTrigger = jingleTrigger;
 
 			this.liveURL = liveURL;
 
-			hserver = new HTTPServer (3124);
+			// TODO: Config for Port
+			toggleServer = new HTTPServer(3124);
 
-			changeState ("Idle");
+			changeState("Idle");
 		}
 
-		void changeState (string state)
-		{
+		void changeState (string state) {
 			controller_state = state;
-			Logger.LogInformation ("Controller: " + state);
+			Logger.LogInformation("Controller changed state to: " + state);
 		}
 
-		public void Start ()
-		{
+		public void Start() {
 			currentState = ControllerAction.Idle;
 			nextState = ControllerAction.Idle;
-			controller_timer.Start ();
-			changeState ("Running");
+			controller_timer.Start();
+			changeState("Running");
 		}
 
-		public void Stop ()
-		{
-			controller_timer.Stop ();
-			changeState ("Idle");
+		public void Stop() {
+			controller_timer.Stop();
+			changeState("Idle");
 		}
 
-		public void Rescan ()
-		{
-			songs.Refresh ();
-			jingles.Refresh ();
-			news.Refresh ();
+		public void Rescan() {
+			songs.Refresh();
+			jingles.Refresh();
+			news.Refresh();
 		}
 
-		public void Skip(){
+		public void Skip() {
 			currentState = ControllerAction.Idle;
+			// stop the current element
 			if (currentElement != null) {
-				currentElement.Pause ();
-				currentElement.Dispose ();
+				currentElement.Pause();
+				currentElement.Dispose();
 				currentElement = null;
 			}
 		}
 
-		void HandleClockEvent (object sender, ElapsedEventArgs e)
-		{		
-			if (hserver.State == true && currentState != ControllerAction.Live) {
+		void HandleClockEvent(object sender, ElapsedEventArgs e) {
+			if (toggleServer.State == true && currentState != ControllerAction.Live) {
 				//Go Live
 				islive = true;
 				currentState = ControllerAction.Live;
 				nextState = ControllerAction.Live;
+
 				lastElement = currentElement;
-				currentElement = new Mplayer (liveURL);
+				currentElement = new Mplayer(liveURL);
 				//Fading
-				currentElement.Play ();
+				currentElement.Play();
 				if (lastElement != null) {
-					mixer.FadeTo (lastElement, 0, SecondsSpentFading);
+					mixer.FadeTo(lastElement, 0, SecondsSpentFading);
 				}
-				mixer.FadeTo (currentElement, 100, SecondsSpentFading);
-			} else {
-				if (hserver.State == false && currentState == ControllerAction.Live) {
-					//Go Dead
-					islive = false;
-					currentState = ControllerAction.Idle;
-					nextState = ControllerAction.Idle;
-				}
+				mixer.FadeTo(currentElement, 100, SecondsSpentFading);
+			} else if (toggleServer.State == false && currentState == ControllerAction.Live) {
+				//Go Dead
+				islive = false;
+				currentState = ControllerAction.Idle;
+				nextState = ControllerAction.Idle;
 			}
 
 			newsTrigger.checkTriggers();
 			jingleTrigger.checkTriggers();
-
-			if (currentState == ControllerAction.Idle) {
-				currentState = nextState;
-				nextState = ControllerAction.Idle;
-				Logger.LogGood ("Current action: " + ControllerActionToString (currentState));
-			}
 
 			if (nextState == ControllerAction.Idle) {
 				//Chose next Action
@@ -174,48 +170,53 @@ namespace RadioController
 						nextState = ControllerAction.Song;
 					}
 				}
-				Logger.LogGood ("Next action: " + ControllerActionToString (nextState));
+				Logger.LogGood("Next action: " + ControllerActionToString(nextState));
 			}
 
-			if (islive) {
-			} else {
-				if (currentElement == null || (!currentElement.StillAlive) || currentElement.Length.Subtract (currentElement.Position) < TimeSpan.FromSeconds (SecondsSpentFading)) {
+			if (currentState == ControllerAction.Idle) {
+				currentState = nextState;
+				nextState = ControllerAction.Idle;
+				Logger.LogGood("Current action: " + ControllerActionToString(currentState));
+			}
+
+			if (!islive) {
+				if (currentElement == null
+				    	|| (!currentElement.StillAlive)
+				    	|| currentElement.Length.Subtract(currentElement.Position) <= TimeSpan.FromSeconds(SecondsSpentFading)) {
+
 					//Switch focus, fade down last element, fade up next element
 					if (lastElement != null) {
-						lastElement.Dispose ();
+						lastElement.Dispose();
 					}
+
+					// select current Element to fade out
 					lastElement = currentElement;
+					if (lastElement != null) {
+						mixer.FadeTo(lastElement, 0, SecondsSpentFading);
+					}
+
+					Logger.LogNormal("now: Fading");
+
 					//Create new element
 					switch (currentState) {
 					case ControllerAction.Jingle:
-						currentElement = new Mplayer (jingles.pickRandomFile ().Path);
-						//Fading
-						currentElement.Play ();
-						if (lastElement != null) {
-							mixer.FadeTo (lastElement, 0, SecondsSpentFading);
-						}
-						mixer.FadeTo (currentElement, 100, SecondsSpentFading);
+						currentElement = new Mplayer(jingles.pickRandomFile().Path);
 						break;
 					case ControllerAction.News:
-						MediaFile nextNews = news.pickRandomFile ();
-						currentElement = new Mplayer (nextNews.Path);
-						//Fading
-						currentElement.Play ();
-						if (lastElement != null) {
-							mixer.FadeTo (lastElement, 0, SecondsSpentFading);
-						}
-						mixer.FadeTo (currentElement, 100, SecondsSpentFading);
+						MediaFile nextNews = news.pickRandomFile();
+						currentElement = new Mplayer(nextNews.Path);
 						break;
 					case ControllerAction.Song:
-						currentElement = new Mplayer (songs.pickRandomFile ().Path);
-						//Fading
-						currentElement.Play ();
-						if (lastElement != null) {
-							mixer.FadeTo (lastElement, 0, SecondsSpentFading);
-						}
-						mixer.FadeTo (currentElement, 100, SecondsSpentFading);
+						currentElement = new Mplayer(songs.pickRandomFile().Path);
+						break;
+					case ControllerAction.Idle:
+						Logger.LogError("Controller Action was Idle");
 						break;
 					}
+
+					//Fading in
+					currentElement.Play();
+					mixer.FadeTo(currentElement, 100, SecondsSpentFading);
 
 				}
 			}

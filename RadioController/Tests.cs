@@ -18,7 +18,6 @@ namespace RadioController
 
 			mixer.FadeTo (mp3, 100, 5);
 
-			mixer.TriggeredCrossfade (mp3, sound2, 5, 5);
 			//sound2.Play();
 			//mixer.FadeTo(sound2,100,5);
 			Console.WriteLine ("MP3: " + mp3.Length.ToString ());

@@ -10,8 +10,8 @@ namespace RadioController
 	{
 		bool state;
 
-		public bool State{
-			get{
+		public bool State {
+			get {
 				return state;
 			}
 		}
@@ -22,28 +22,28 @@ namespace RadioController
 		{
 			state = false;
 			tcpl = new TcpListener(port);
-			t = new Thread (new ThreadStart (listen));
-			t.Start ();
+			t = new Thread(new ThreadStart(listen));
+			t.Start();
 
 		}
 
 		~HTTPServer(){
-			t.Abort ();
+			t.Abort();
 		}
 
 		void listen(){
-			tcpl.Start ();
+			tcpl.Start();
 			while(true){
-				TcpClient tclient = tcpl.AcceptTcpClient ();
-				StreamWriter srw = new StreamWriter (tclient.GetStream ());
-				srw.WriteLine ("HTTP/1.1 200 OK");
-				srw.WriteLine ("Connection: close");
-				srw.WriteLine ("Content-Type: text/plain");
-				srw.WriteLine ();
-				srw.WriteLine ("OK");
+				TcpClient tclient = tcpl.AcceptTcpClient();
+				StreamWriter srw = new StreamWriter(tclient.GetStream());
+				srw.WriteLine("HTTP/1.1 200 OK");
+				srw.WriteLine("Connection: close");
+				srw.WriteLine("Content-Type: text/plain");
+				srw.WriteLine();
+				srw.WriteLine("OK");
 				state = !state;
-				srw.Flush ();
-				tclient.Close ();
+				srw.Flush();
+				tclient.Close();
 			}
 		}
 	}
