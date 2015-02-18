@@ -24,6 +24,7 @@ namespace RadioController
 				}
 				strw.WriteLine (line);
 			}
+			System.Diagnostics.Debug.WriteLine (line);
 		}
 
 		~Logger(){

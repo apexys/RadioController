@@ -33,22 +33,24 @@ namespace RadioController
 		~Mplayer() {
 			refresherTimer.Stop();
 			try {
+				Volume = 0f;
 				mplayer_input.WriteLine("stop");
 				mplayer_process.Kill();
 			} catch (Exception ex) {
 				//Nothing to do here, sometimes it has already collected the garbage and sometimes not
-				Logger.LogDebug("Deconstructor: MPlayer was already dead: " + ex.Message);
+				//Logger.LogDebug("Deconstructor: MPlayer was already dead: " + ex.Message);
 			}
 		}
 
 		public void Dispose() {
 			refresherTimer.Stop();
 			try {
+				Volume = 0f;
 				mplayer_input.WriteLine("stop");
 				mplayer_process.Kill();
 			} catch (Exception ex) {
 				//Nothing to do here, sometimes it has already collected the garbage and sometimes not
-				Logger.LogDebug("Dispose: MPlayer was already dead: " + ex.Message);
+				//Logger.LogDebug("Dispose: MPlayer was already dead: " + ex.Message);
 			}
 		}
 
@@ -141,7 +143,6 @@ namespace RadioController
 					if (Math.Abs (target_volume - mplayer_volume) > delta_volume) {
 						setVolume (target_volume);
 					}
-					Logger.LogDebug ("Volume change! " + mplayer_volume.ToString());
 				}
 
 				if (e.Data.StartsWith("ANS_TIME_POSITION=")) {

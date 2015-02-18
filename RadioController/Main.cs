@@ -55,27 +55,39 @@ namespace RadioController
 
 		static void interact(Controller ctrl){
 			while (true) {
-				string input = Console.ReadLine().Trim();
-				switch (input) {
-				case "exit":
-					Console.WriteLine("Terminting program");
-					//TODO: Make sure all mplayers DIE here
-					Environment.Exit(0);
-					break;
-				
-				case "rescan":
-					Logger.LogNormal("Rescanning media collection");
-					// Retraverse Meida Directory
-					ctrl.Rescan();
-					Logger.LogNormal("Scan done");
-					Logger.LogLine();
-					break;
-				case "skip":
-					Logger.LogNormal("Skipping current action");
-					ctrl.Skip();
-					break;
-				default:
-					break; //Nothing to do here
+				string[] input = Console.ReadLine().Trim().Split (' ');
+				if (input.Length > 0) {
+					switch (input[0].ToLower()) {
+					case "exit":
+						Console.WriteLine ("Terminting program");
+						//TODO: Make sure all mplayers DIE here
+						ctrl.Dispose();
+						Environment.Exit (0);
+						break;
+					case "stop":
+						ctrl.Stop();
+						break;
+					case "start":
+					case "play":
+						ctrl.Start();
+						break;
+					case "pause":
+						ctrl.Pause();
+						break;
+					case "rescan":
+						Logger.LogNormal ("Rescanning media collection");
+						// Retraverse Meida Directory
+						ctrl.Rescan ();
+						Logger.LogNormal ("Scan done");
+						Logger.LogLine ();
+						break;
+					case "skip":
+						Logger.LogNormal ("Skipping current action");
+						ctrl.Skip ();
+						break;
+					default:
+						break; //Nothing to do here
+					}
 				}
 			}
 		}

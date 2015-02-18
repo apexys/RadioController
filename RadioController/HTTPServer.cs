@@ -21,7 +21,7 @@ namespace RadioController
 		public HTTPServer (int port)
 		{
 			state = false;
-			tcpl = new TcpListener(port);
+			tcpl = new TcpListener(IPAddress.Any, port);
 			t = new Thread(new ThreadStart(listen));
 			t.Start();
 

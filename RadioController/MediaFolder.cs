@@ -9,6 +9,7 @@ namespace RadioController
 	{
 		Random r;
 		int lastIndex;
+		List<int> lastPlayed;
 		public string path;
 
 		public string Path {
@@ -22,6 +23,7 @@ namespace RadioController
 
 		public void Refresh ()
 		{
+			lastPlayed = new List<int> ();
 			files = new List<MediaFile> ();
 			lastIndex = 0;
 			//Get Media Infos
@@ -36,18 +38,20 @@ namespace RadioController
 			Logger.LogInformation ("Loaded " + files.Count.ToString () + " items from " + path);
 		}
 
-		public MediaFile pickRandomFile ()
-		{
-			if (files.Count == 1) {
-				return files [0];
-			} else {
-				int temp;
-				do {
-					temp = r.Next (0, files.Count);
-				} while(temp == lastIndex);
-				lastIndex = temp;
-				return files [temp];
+		public MediaFile pickRandomFile () {
+
+			int next;
+			do {
+				next = r.Next (0, files.Count);
+			} while(lastPlayed.Contains(next));
+
+
+			lastPlayed.Add (next);
+
+			if (lastPlayed.Count > (files.Count / 4)) {
+				lastPlayed.RemoveAt (0);
 			}
+			return files[next];
 		}
 
 		public MediaFolder (string folderPath)

@@ -21,7 +21,7 @@ namespace RadioController
 		}
 
 		AudioMetaData metaData;
-		AudioMetaData MetaData{
+		public AudioMetaData MetaData{
 			get{
 				return metaData.Clone ();
 			}
@@ -37,7 +37,7 @@ namespace RadioController
 			//tempmp.Play ();
 			int i = 0;
 			while (tempmp.Metadata.Title == null && i  < 10) {
-				Thread.Sleep (100);
+				Thread.Sleep (30);
 				i++;
 			}
 			metaData = tempmp.Metadata;
