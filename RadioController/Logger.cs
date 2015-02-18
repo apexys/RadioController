@@ -13,6 +13,7 @@ namespace RadioController
 
 		static void writeLine(string line){
 			if (logToFile) {
+				try{
 				if (strw == null) {
 					if (!File.Exists (Environment.CurrentDirectory + Path.PathSeparator + logFileName)) {
 						File.WriteAllText (Environment.CurrentDirectory + Path.PathSeparator + logFileName,"");
@@ -23,6 +24,9 @@ namespace RadioController
 					Console.WriteLine ("Continuing logfile at " + Environment.CurrentDirectory + Path.PathSeparator + logFileName);
 				}
 				strw.WriteLine (line);
+				}catch{
+					;
+				}
 			}
 			System.Diagnostics.Debug.WriteLine (line);
 		}

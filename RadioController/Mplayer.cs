@@ -31,26 +31,19 @@ namespace RadioController
 		AudioMetaData mplayer_metadata;
 
 		~Mplayer() {
-			refresherTimer.Stop();
-			try {
-				Volume = 0f;
-				mplayer_input.WriteLine("stop");
-				mplayer_process.Kill();
-			} catch (Exception ex) {
-				//Nothing to do here, sometimes it has already collected the garbage and sometimes not
-				//Logger.LogDebug("Deconstructor: MPlayer was already dead: " + ex.Message);
-			}
+			Dispose();
 		}
 
 		public void Dispose() {
 			refresherTimer.Stop();
 			try {
 				Volume = 0f;
-				mplayer_input.WriteLine("stop");
+				try {
+					mplayer_input.WriteLine("stop");
+				} catch {}
 				mplayer_process.Kill();
-			} catch (Exception ex) {
+			} catch {
 				//Nothing to do here, sometimes it has already collected the garbage and sometimes not
-				//Logger.LogDebug("Dispose: MPlayer was already dead: " + ex.Message);
 			}
 		}
 
@@ -86,6 +79,7 @@ namespace RadioController
 				mplayer_length = new TimeSpan (0, 0, 0);
 
 				mplayer_metadata = new AudioMetaData ();
+				mplayer_metadata.Filename = path;
 
 				refreshValues ();
 				Pause ();
@@ -115,15 +109,16 @@ namespace RadioController
 				ticks_since_last_message ++;
 				if (ticks_since_last_message > ticks_to_death) {
 					still_alive = false;
-					Logger.LogError("Mplayer died!");
 				}
 			}
 		}
 
 		void refreshValues() {
-			mplayer_input.WriteLine("get_property volume");
-			mplayer_input.WriteLine("get_time_pos");
-			mplayer_input.WriteLine("get_time_length");
+			try {
+				mplayer_input.WriteLine("get_property volume");
+				mplayer_input.WriteLine("get_time_pos");
+				mplayer_input.WriteLine("get_time_length");
+			} catch {}
 		}
 
 		void HandleErrorDataReceived (object sender, DataReceivedEventArgs e) {
@@ -176,8 +171,10 @@ namespace RadioController
 
 		void TogglePause() {
 			mplayer_paused = !mplayer_paused;
-			mplayer_input.WriteLine("pause");
-			mplayer_input.Flush();
+			try {
+				mplayer_input.WriteLine("pause");
+				mplayer_input.Flush();
+			} catch {}
 		}
 
 		public void Play() {
@@ -220,8 +217,10 @@ namespace RadioController
 
 		void setVolume(float volume){
 			//Ask mplayer to change the volume
-			mplayer_input.WriteLine("set_property volume " + volume.ToString());
+			try {
+				mplayer_input.WriteLine("set_property volume " + volume.ToString());
 			mplayer_input.Flush();
+			} catch {}
 		}
 
 		public TimeSpan Length {

@@ -64,9 +64,9 @@ namespace RadioController
 		}
 
 		Mplayer currentElement;
-		Mplayer lastElement;
 
 		ControllerAction currentState;
+		ControllerAction lastState;
 
 		MediaFolder songs;
 		MediaFolder jingles;
@@ -81,9 +81,11 @@ namespace RadioController
 
 		string liveURL;
 		HTTPServer toggleServer;
-		
+
+		// TODO: remove demoLoop
+		int demoLoop = -1;
 		bool doFade = true;
-		int sample = 12;
+		int sample = 0;
 
 		/// <summary>
 		/// Switches between Fading between elements or simply cutting over
@@ -147,6 +149,7 @@ namespace RadioController
 			controller_timer.Start();
 			if (currentElement != null) {
 				currentElement.Play();
+				currentElement.Volume = 100f;
 			}
 			changeState("Running");
 		}
@@ -167,6 +170,20 @@ namespace RadioController
 			changeState("Paused");
 		}
 
+		public void fadeOut() {
+			if (currentElement != null) {
+				// TODO: fix new tracks fading in, wjile fading out
+				mixer.FadeTo(currentElement, 0f, SecondsSpentFading, (Mplayer pl) => {Pause();});
+			}
+		}
+		
+		public void fadeIn() {
+			if (currentElement != null) {
+				currentElement.Play();
+				mixer.FadeTo(currentElement, 100f, SecondsSpentFading);
+			}
+		}
+
 		public void Rescan() {
 			songs.Refresh();
 			jingles.Refresh();
@@ -184,24 +201,47 @@ namespace RadioController
 			Logger.LogInformation("Track Skipped");
 		}
 
+		void setMPlayer(Mplayer player) {
+			
+			if (currentElement != null) {
+				if (doFade) {
+					if (lastState != ControllerAction.Jingle) {
+						mixer.FadeTo (currentElement, 0f, SecondsSpentFading, (Mplayer pl) => {pl.Dispose();});
+					}
+				} else {
+					currentElement.Dispose();
+				}
+			}
+
+			currentElement = player;
+
+			if (currentElement != null) {
+				currentElement.Play ();
+				if (doFade && currentState != ControllerAction.Jingle) {
+					mixer.FadeTo(currentElement, 100f, SecondsSpentFading);
+				} else {
+					currentElement.Volume = 100f;
+				}
+			}
+		}
+
 		void HandleClockEvent(object sender, ElapsedEventArgs e) {
+			Mplayer newPlayer = null;
+
+			// Do we want to go live
 			if (toggleServer.State == true && currentState != ControllerAction.Live) {
 				//Go Live
 				islive = true;
 				currentState = ControllerAction.Live;
-	
-				lastElement = currentElement;
-				currentElement = new Mplayer(liveURL);
-				//Fading
-				currentElement.Play();
-				if (lastElement != null) {
-					mixer.FadeTo(lastElement, 0, SecondsSpentFading);
-				}
-				mixer.FadeTo(currentElement, 100, SecondsSpentFading);
+
+				setMPlayer(new Mplayer (liveURL));
+
 			} else if (toggleServer.State == false && currentState == ControllerAction.Live) {
 				//Go Dead
 				islive = false;
 				currentState = ControllerAction.Idle;
+				
+				setMPlayer(null);
 			}
 
 			newsTrigger.checkTriggers();
@@ -213,80 +253,61 @@ namespace RadioController
 				    	|| (doFade && (currentElement.Length.Subtract(currentElement.Position) <= TimeSpan.FromSeconds(SecondsSpentFading)))
 				    	|| (sample > 0 && (currentElement.Position.Seconds > sample)) ) {
 
-					if (currentElement == null) {
-						Logger.LogNormal("Currentelement was NULL");
-					} else
-					if (!currentElement.StillAlive) {
-						Logger.LogNormal("Currentelement died");
-					} else
-					if (doFade && currentElement.Length.Subtract (currentElement.Position) <= TimeSpan.FromSeconds (SecondsSpentFading)) {
-						Logger.LogNormal("Start Fading");
-					} else
-					if (sample > 0 && currentElement.Position.Seconds > sample) {
-						Logger.LogNormal("Sample Timeout");
-					}
-
+					lastState = currentState;
 
 					//Chose next Action
-					if (newsTrigger.PreviousTriggerChanged && currentState != ControllerAction.News) {
-						currentState = ControllerAction.News;
+					if (demoLoop < 0) {
+						if (newsTrigger.PreviousTriggerChanged && currentState != ControllerAction.News) {
+							currentState = ControllerAction.News;
+						} else {
+							if (jingleTrigger.PreviousTriggerChanged) {
+								currentState = ControllerAction.Jingle;
+							} else {
+								currentState = ControllerAction.Song;
+							}
+						}
 					} else {
-						if (jingleTrigger.PreviousTriggerChanged) {
-							currentState = ControllerAction.Jingle;
+						// a basic Demo Loop
+						demoLoop++;
+						if (demoLoop % 3 == 0) {
+							if (demoLoop == 9) {
+								currentState = ControllerAction.News;
+								demoLoop = 0;
+							} else {
+								currentState = ControllerAction.Jingle;
+							}
 						} else {
 							currentState = ControllerAction.Song;
 						}
 					}
+
 					Logger.LogGood("Next action: " + ControllerActionToString(currentState));
-
-					//Switch focus, fade down last element, fade up next element
-					if (lastElement != null) {
-						lastElement.Dispose();
-					}
-
-					// select current Element to fade out
-					lastElement = currentElement;
-					if (lastElement != null) {
-						if (doFade) {
-							mixer.FadeTo (lastElement, 0f, SecondsSpentFading);
-						} else {
-							lastElement.Volume = 0f;
-							lastElement.Dispose();
-							lastElement = null;
-						}
-					}
-
-					Logger.LogNormal("now: Fading");
 
 					//Create new element
 					switch (currentState) {
 					case ControllerAction.Jingle:
-						currentElement = new Mplayer(jingles.pickRandomFile().Path);
+						newPlayer = new Mplayer(jingles.pickRandomFile().Path);
 						break;
 					case ControllerAction.News:
 						MediaFile nextNews = news.pickRandomFile();
-						currentElement = new Mplayer(nextNews.Path);
+						newPlayer = new Mplayer(nextNews.Path);
 						break;
 					case ControllerAction.Song:
 						MediaFile mf = songs.pickRandomFile ();
 						Logger.LogNormal ("Now playing: " + mf.MetaData.ToString ());
-						currentElement = new Mplayer(mf.Path);
+						newPlayer = new Mplayer(mf.Path);
 						break;
 					case ControllerAction.Idle:
 						Logger.LogError("Controller Action was Idle");
 						break;
 					}
 
-					//Fading in
-					currentElement.Play();
-					if (doFade) {
-						mixer.FadeTo(currentElement, 100f, SecondsSpentFading);
-					} else {
-						currentElement.Volume = 100f;
+					if (newPlayer != null) {
+						setMPlayer(newPlayer);
 					}
 				}
 			}
-			controller_timer.Start ();
+			controller_timer.Start();
 		}
 	}
 }

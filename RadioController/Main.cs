@@ -64,15 +64,26 @@ namespace RadioController
 						ctrl.Dispose();
 						Environment.Exit (0);
 						break;
+					case "s":
 					case "stop":
 						ctrl.Stop();
 						break;
+					case "p":
 					case "start":
 					case "play":
 						ctrl.Start();
 						break;
+					case "h":
 					case "pause":
 						ctrl.Pause();
+						break;
+					case "fi":
+					case "fadein":
+						ctrl.fadeIn();
+						break;
+					case "fo":
+					case "fadeout":
+						ctrl.fadeOut();
 						break;
 					case "rescan":
 						Logger.LogNormal ("Rescanning media collection");

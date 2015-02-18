@@ -29,10 +29,25 @@ namespace RadioController
 			player.Play();
 
 			FaderTask ft = new FaderTask();
-			ft.player = player;
+			ft.player    = player;
+			ft.endAction = null;
 			ft.endVolume = targetVolume;
 			ft.stepsLeft = (int) ((seconds * 1000f) / (float) CLOCK_INTERVAL_MILISECONDS);
-			ft.step = ((ft.endVolume - player.Volume) * CLOCK_INTERVAL_MILISECONDS) / (seconds * 1000f);
+			ft.step      = ((ft.endVolume - player.Volume) * CLOCK_INTERVAL_MILISECONDS) / (seconds * 1000f);
+			fades.Add(ft);
+
+			Logger.LogNormal("Fading "+ player.Volume.ToString() + " to " + targetVolume.ToString());
+		}
+
+		public void FadeTo(Mplayer player, float targetVolume, float seconds, Action<Mplayer> endAction) {
+			player.Play();
+
+			FaderTask ft = new FaderTask();
+			ft.player    = player;
+			ft.endAction = endAction;
+			ft.endVolume = targetVolume;
+			ft.stepsLeft = (int) ((seconds * 1000f) / (float) CLOCK_INTERVAL_MILISECONDS);
+			ft.step      = ((ft.endVolume - player.Volume) * CLOCK_INTERVAL_MILISECONDS) / (seconds * 1000f);
 			fades.Add(ft);
 
 			Logger.LogNormal("Fading "+ player.Volume.ToString() + " to " + targetVolume.ToString());
@@ -47,11 +62,16 @@ namespace RadioController
 				List<FaderTask> fadesToRemove = new List<FaderTask>();
 
 				for (int i = 0; i < fades.Count; i++) {
-					if (fades [i].stepsLeft <= 1) {
+					if (fades[i].stepsLeft <= 1) {
 						// last step to fade
-						fades [i].player.Volume = fades [i].endVolume;
-						fadesToRemove.Add (fades [i]);
-						Logger.LogDebug ("Mixer fading Done: " + fades [i].player.Volume.ToString ());
+						fades[i].player.Volume = fades[i].endVolume;
+
+						fadesToRemove.Add(fades[i]);
+						Logger.LogDebug("Mixer fading Done: " + fades[i].endVolume.ToString());
+
+						if (fades[i].endAction != null) {
+							fades[i].endAction(fades[i].player);
+						}
 					} else {
 						// fade one step
 						fades [i].player.Volume += fades [i].step;
@@ -75,6 +95,7 @@ namespace RadioController
 		public int stepsLeft;
 		public float endVolume;
 		public float step;
+		public Action<Mplayer> endAction;
 	}
 }
 
