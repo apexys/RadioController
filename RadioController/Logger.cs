@@ -15,7 +15,7 @@ namespace RadioController
 			if (logToFile) {
 				if (strw == null) {
 					if (!File.Exists (Environment.CurrentDirectory + Path.PathSeparator + logFileName)) {
-						File.Create (Environment.CurrentDirectory + Path.PathSeparator + logFileName);
+						File.WriteAllText (Environment.CurrentDirectory + Path.PathSeparator + logFileName,"");
 						Console.WriteLine ("Created logfile at " + Environment.CurrentDirectory + Path.PathSeparator + logFileName);
 					}
 					strw = new StreamWriter (File.Open (Environment.CurrentDirectory + Path.PathSeparator + logFileName, FileMode.Append));
