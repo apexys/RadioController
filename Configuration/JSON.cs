@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 
-namespace RadioController
+namespace Configuration
 {
 	//TODO: Vielleicht durch http://visitmix.com/writings/the-rise-of-json ersetzen
 	public class JSON

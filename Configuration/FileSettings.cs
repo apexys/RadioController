@@ -4,7 +4,7 @@ using System.IO;
 using System.Collections.Generic;
 using RadioLogger;
 
-namespace RadioController.Configuration
+namespace Configuration
 {
 	public class FileSettings : BasicSettings
 	{

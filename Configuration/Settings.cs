@@ -1,6 +1,6 @@
 using System;
 
-namespace RadioController.Configuration
+namespace Configuration
 {
 	public class Settings
 	{

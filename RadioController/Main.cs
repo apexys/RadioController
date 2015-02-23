@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.IO;
 using System.Collections.Generic;
-using RadioController.Configuration;
+using Configuration;
 using RadioPlayer;
 using RadioLogger;
 

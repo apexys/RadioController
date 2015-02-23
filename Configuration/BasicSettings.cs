@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace RadioController.Configuration
+namespace Configuration
 {
 	public abstract class BasicSettings : ISettings
 	{
