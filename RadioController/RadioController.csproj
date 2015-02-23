@@ -57,8 +57,9 @@
     <Compile Include="TimedTrigger.cs" />
     <Compile Include="MediaFile.cs" />
     <Compile Include="HTTPServer.cs" />
-    <Compile Include="IPlayerConnection.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="ISoundObject.cs" />
+    <Compile Include="IMixer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
