@@ -1,6 +1,6 @@
 using System;
 
-namespace RadioController
+namespace RadioPlayer
 {
 	public class AudioMetaData
 	{

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace RadioController
 {
+	//TODO: Vielleicht durch http://visitmix.com/writings/the-rise-of-json ersetzen
 	public class JSON
 	{
 		public JSON() {

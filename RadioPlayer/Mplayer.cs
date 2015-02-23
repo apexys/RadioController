@@ -3,8 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Timers;
 using System.Threading.Tasks;
+using RadioLogger;
 
-namespace RadioController
+namespace RadioPlayer
 {
 	public class Mplayer
 	{

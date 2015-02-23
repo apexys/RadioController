@@ -49,13 +49,9 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="AudioMetaData.cs" />
-    <Compile Include="Mplayer.cs" />
     <Compile Include="Mixer.cs" />
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="Controller.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="Tests.cs" />
     <Compile Include="RandomShow.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="MediaFolder.cs" />
@@ -74,5 +70,15 @@
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RadioPlayer\RadioPlayer.csproj">
+      <Project>{08FE1073-9EA7-45D2-8F58-19F39D66E606}</Project>
+      <Name>RadioPlayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\RadioLogger.csproj">
+      <Project>{8C51D53E-B7F3-4EC2-A53A-52F31EF0B12F}</Project>
+      <Name>RadioLogger</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

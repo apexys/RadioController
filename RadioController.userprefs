@@ -1,12 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="RadioPlayer/Mplayer.cs">
+    <Files>
+      <File FileName="RadioPlayer/AudioMetaData.cs" Line="3" Column="22" />
+      <File FileName="RadioPlayer/Mplayer.cs" Line="51" Column="9" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="RadioController" expanded="True">
-            <Node name="MediaFile.cs" selected="True" />
-          </Node>
+          <Node name="RadioController" expanded="True" />
+          <Node name="RadioPlayer" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
