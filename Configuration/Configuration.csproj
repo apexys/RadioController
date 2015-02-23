@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Configuration</RootNamespace>
     <AssemblyName>Settings</AssemblyName>
-    <BaseDirectory>..\Configuration</BaseDirectory>
+    <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

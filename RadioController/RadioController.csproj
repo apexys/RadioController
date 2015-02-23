@@ -53,12 +53,9 @@
     <Compile Include="Controller.cs" />
     <Compile Include="RandomShow.cs" />
     <Compile Include="Globals.cs" />
-    <Compile Include="MediaFolder.cs" />
     <Compile Include="TimedTrigger.cs" />
-    <Compile Include="MediaFile.cs" />
     <Compile Include="HTTPServer.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="IMixer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -78,6 +75,10 @@
     <ProjectReference Include="..\Configuration\Configuration.csproj">
       <Project>{3A7A717D-6EC1-4757-9887-F8DEEB1CA933}</Project>
       <Name>Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RadioLibrary\RadioLibrary.csproj">
+      <Project>{9EBE0EA7-8E9A-4E74-AE76-15FA4B9581F5}</Project>
+      <Name>RadioLibrary</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

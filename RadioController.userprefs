@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RadioPlayer/VLCProcess.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RadioPlayer/Mplayer.cs">
     <Files>
       <File FileName="RadioController/Main.cs" Line="1" Column="1" />
-      <File FileName="RadioPlayer/VLCProcess.cs" Line="20" Column="4" />
+      <File FileName="RadioPlayer/VLCProcess.cs" Line="28" Column="44" />
+      <File FileName="RadioPlayer/Mplayer.cs" Line="217" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +12,7 @@
           <Node name="Configuration" expanded="True" />
           <Node name="RadioController" expanded="True" />
           <Node name="RadioPlayer" expanded="True">
-            <Node name="VLCProcess.cs" selected="True" />
+            <Node name="ISoundObject.cs" selected="True" />
           </Node>
         </State>
       </Pad>

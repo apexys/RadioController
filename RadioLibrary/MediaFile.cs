@@ -1,9 +1,8 @@
 using System;
 using System.Threading;
 using System.IO;
-using RadioPlayer;
 
-namespace RadioController
+namespace RadioLibrary
 {
 	public class MediaFile
 	{
@@ -34,15 +33,7 @@ namespace RadioController
 
 			name = new FileInfo (path).Name;
 
-			Mplayer tempmp = new Mplayer (path);
-			//tempmp.Play ();
-			int i = 0;
-			while (tempmp.Metadata.Title == null && i  < 10) {
-				Thread.Sleep (30);
-				i++;
-			}
-			metaData = tempmp.Metadata;
-			tempmp.Dispose();
+			metaData = MediaInfoWrapper.getMetadata (path);
 		}
 	}
 }

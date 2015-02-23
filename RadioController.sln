@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioLogger", "Logger\Radio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{3A7A717D-6EC1-4757-9887-F8DEEB1CA933}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioLibrary", "RadioLibrary\RadioLibrary.csproj", "{9EBE0EA7-8E9A-4E74-AE76-15FA4B9581F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -27,6 +29,10 @@ Global
 		{8C51D53E-B7F3-4EC2-A53A-52F31EF0B12F}.Debug|x86.Build.0 = Debug|Any CPU
 		{8C51D53E-B7F3-4EC2-A53A-52F31EF0B12F}.Release|x86.ActiveCfg = Release|Any CPU
 		{8C51D53E-B7F3-4EC2-A53A-52F31EF0B12F}.Release|x86.Build.0 = Release|Any CPU
+		{9EBE0EA7-8E9A-4E74-AE76-15FA4B9581F5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9EBE0EA7-8E9A-4E74-AE76-15FA4B9581F5}.Debug|x86.Build.0 = Debug|Any CPU
+		{9EBE0EA7-8E9A-4E74-AE76-15FA4B9581F5}.Release|x86.ActiveCfg = Release|Any CPU
+		{9EBE0EA7-8E9A-4E74-AE76-15FA4B9581F5}.Release|x86.Build.0 = Release|Any CPU
 		{9FC1C79E-1D6D-415D-BD65-F2523100AF36}.Debug|x86.ActiveCfg = Debug|x86
 		{9FC1C79E-1D6D-415D-BD65-F2523100AF36}.Debug|x86.Build.0 = Debug|x86
 		{9FC1C79E-1D6D-415D-BD65-F2523100AF36}.Release|x86.ActiveCfg = Release|x86

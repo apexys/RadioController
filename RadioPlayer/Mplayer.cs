@@ -22,7 +22,7 @@ namespace RadioPlayer
 		const int ticks_to_death = 8;
 		TimeSpan mplayer_position;
 		TimeSpan mplayer_length;
-		AudioMetaData mplayer_metadata;
+		//AudioMetaData mplayer_metadata;
 
 		~Mplayer() {
 			Dispose();
@@ -74,8 +74,8 @@ namespace RadioPlayer
 				mplayer_position = new TimeSpan(0, 0, 0);
 				mplayer_length = new TimeSpan(0, 0, 0);
 
-				mplayer_metadata = new AudioMetaData();
-				mplayer_metadata.Filename = path;
+				//mplayer_metadata = new AudioMetaData();
+				//mplayer_metadata.Filename = path;
 
 				refreshValues();
 				Pause();
@@ -148,7 +148,7 @@ namespace RadioPlayer
 				}
 
 
-
+				/*
 				if (e.Data.Trim().ToLower().StartsWith("title: ")) {
 					string title = e.Data.Trim().Substring("Title: ".Length).Trim();
 					mplayer_metadata.Title = title;
@@ -162,7 +162,7 @@ namespace RadioPlayer
 				if (e.Data.Trim().ToLower().StartsWith("artist: ")) {
 					string artist = e.Data.Trim().Substring("Artist: ".Length).Trim();
 					mplayer_metadata.Artist = artist;
-				}
+				}*/
 			}
 		}
 
@@ -190,11 +190,11 @@ namespace RadioPlayer
 
 		}
 
-		public AudioMetaData Metadata {
+		/*public AudioMetaData Metadata {
 			get {
 				return mplayer_metadata.Clone();
 			}
-		}
+		}*/
 
 		/// <summary>
 		/// Gets or sets the volume.

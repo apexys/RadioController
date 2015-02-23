@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading;
 using RadioLogger;
 
-namespace RadioController
+namespace RadioLibrary
 {
 	public class MediaFolder
 	{

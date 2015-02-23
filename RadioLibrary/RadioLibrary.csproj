@@ -5,11 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{08FE1073-9EA7-45D2-8F58-19F39D66E606}</ProjectGuid>
+    <ProjectGuid>{9EBE0EA7-8E9A-4E74-AE76-15FA4B9581F5}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RadioPlayer</RootNamespace>
-    <AssemblyName>RadioPlayer</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>RadioLibrary</RootNamespace>
+    <AssemblyName>RadioLibrary</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,20 +33,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Mplayer.cs" />
-    <Compile Include="VLCProcess.cs" />
-    <Compile Include="ISoundObject.cs" />
-    <Compile Include="IMixer.cs" />
+    <Compile Include="MediaFolder.cs" />
+    <Compile Include="MediaFile.cs" />
+    <Compile Include="AudioMetaData.cs" />
+    <Compile Include="MediaInfoWrapper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Logger\RadioLogger.csproj">
       <Project>{8C51D53E-B7F3-4EC2-A53A-52F31EF0B12F}</Project>
       <Name>RadioLogger</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Configuration\Configuration.csproj">
-      <Project>{3A7A717D-6EC1-4757-9887-F8DEEB1CA933}</Project>
-      <Name>Configuration</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
