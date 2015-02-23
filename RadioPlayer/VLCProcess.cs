@@ -3,26 +3,16 @@ using System.Diagnostics;
 using System.IO;
 using Configuration;
 using RadioLogger;
+using RadioLibrary;
+using System.Threading;
 
 namespace RadioPlayer
 {
-	public class VLCProcess : ISoundObject
+	public class VLCProcess
 	{
 		Process process;
 		StreamReader sout;
 		StreamWriter sin;
-
-		TimeSpan position;
-		TimeSpan length;
-
-		bool playing = false;
-
-		string version = "";
-
-		DateTime lastPlaying;
-		DateTime lastPaused;
-
-		//AudioMetaData metadata;
 
 		public VLCProcess() {
 
@@ -36,7 +26,7 @@ namespace RadioPlayer
 			process.StartInfo.CreateNoWindow = true;
 			process.EnableRaisingEvents = true;
 
-
+			process.Start();
 
 			sin = process.StandardInput;
 			sin.AutoFlush = true;
@@ -44,71 +34,60 @@ namespace RadioPlayer
 			sout = process.StandardOutput;
 
 			// this call can throw an error
-			process.Start();
 
-			version = sout.ReadLine();
+			String version = sout.ReadLine();
+			string dump = sout.ReadLine ();
 
 			Logger.LogInformation ("VLC version " + version);
-
-			position = new TimeSpan(0, 0, 0);
-			length = new TimeSpan(0, 0, 0);
-
-			//metadata = new AudioMetaData();
-
-
 		}
 
-		#region ISoundObject implementation
-
-		public float Volume {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
+		public void setFile(MediaFile mf){
+			sin.WriteLine ("clear");
+			sin.WriteLine ("enqueue " + mf.Path); 
+			sin.WriteLine ("goto 0");//GOTO considered harmful :P
+			sin.WriteLine ("pause");
 		}
 
-		public bool Playing {
-			get {
-				return playing;
-			}
-			set {
-				if (value != playing) {
-					if (value == true) {
-						sin.WriteLine ("play");
-
-						playing = true;
-					} else {
-						sin.WriteLine ("pause");
-						playing = false;
-					}
-				}
-			}
+		public void play(){
+			sin.WriteLine ("play");
 		}
 
-		public float Position {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
+		public void pause(){
+			sin.WriteLine ("pause");
 		}
 
-		public float Duration {
-			get {
-				throw new NotImplementedException ();
-			}
+		public int getPosition(){
+			sin.WriteLine ("get_time");
+			Thread.Sleep (30);
+			debugStream (sout);
+			return Convert.ToInt32 (sout.ReadLine ().Trim());
 		}
 
-		public string Title {
-			get {
-				throw new NotImplementedException ();
-			}
+		public int getLength(){
+			sin.WriteLine ("get_length");
+			Thread.Sleep (30);
+			debugStream (sout);
+			string s = sout.ReadLine ().Trim();
+			return Convert.ToInt32 (s);
 		}
 
-		#endregion
+		public void setVolume(int volume){
+			sin.WriteLine ("volume " + volume.ToString ());
+		}
+
+		public int getVolume(){
+			sout.DiscardBufferedData ();
+			sin.WriteLine ("volume");
+			Thread.Sleep (30);
+			return Convert.ToInt32 (sout.ReadLine ().Trim ());
+		}
+
+		void debugStream(StreamReader s){
+			s.Peek ();
+		}
+
+
+
 	}
 }
 

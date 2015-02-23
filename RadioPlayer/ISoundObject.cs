@@ -6,8 +6,8 @@ namespace RadioPlayer
 	{
 		float Volume {get; set;}
 		bool Playing {get; set;}
-		float Position {get; set;}
-		float Duration {get;}
+		TimeSpan Position {get; set;}
+		TimeSpan Duration {get;}
 		string Title {get;}
 	}
 }

@@ -30,7 +30,7 @@ namespace RadioController
 			string[] jingles = Settings.getStrings("media.jingles", new string[] {"hi"});
 			string[] news = Settings.getStrings("media.news", new string[] {"hi"});
 
-
+			/*
 			//1. Try to find a version of mplayer
 			Logger.LogNormal("Looking for mplayer...");
 			string mplayer_version = Mplayer.getVersion();
@@ -41,7 +41,7 @@ namespace RadioController
 			}
 			Logger.LogLine();
 			Logger.LogDebug("Environment: " + Environment.CurrentDirectory);
-
+*/
 			//2. Create a Controller
 			TimedTrigger jinglett = new TimedTrigger();
 			int[] trigger = Settings.getInts("trigger.jingles", new int[] {0, 15, 30, 45});
