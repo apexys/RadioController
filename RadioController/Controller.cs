@@ -10,7 +10,6 @@ namespace RadioController
 		// TODO: Config for Fading time
 		const int SecondsSpentFading = 3;
 		bool islive;
-
 		/*
 		bool isLive {
 			get {
@@ -22,7 +21,8 @@ namespace RadioController
 		}
 		*/
 
-		public enum ControllerAction {
+		public enum ControllerAction
+		{
 			Idle,
 			Song,
 			Jingle,
@@ -38,7 +38,7 @@ namespace RadioController
 			Stop();
 		}
 
-		string ControllerActionToString (ControllerAction action) {
+		string ControllerActionToString(ControllerAction action) {
 			switch (action) {
 			case ControllerAction.Idle:
 				return "Idle";
@@ -74,15 +74,12 @@ namespace RadioController
 
 		TimedTrigger jingleTrigger;
 		TimedTrigger newsTrigger;
-
 		Timer controller_timer;
 
 		Mixer mixer;
-
 		string liveURL;
 		HTTPServer toggleServer;
 
-		// TODO: remove demoLoop
 		int demoLoop = -1;
 		bool doFade = true;
 		int sample = 0;
@@ -113,8 +110,7 @@ namespace RadioController
 			}
 		}
 
-
-		public Controller (string songFolder, string jingleFolder, string newsFolder, TimedTrigger jingleTrigger, TimedTrigger newsTrigger, string liveURL) {
+		public Controller(string songFolder, string jingleFolder, string newsFolder, TimedTrigger jingleTrigger, TimedTrigger newsTrigger, string liveURL) {
 			//Basic state
 			changeState("Initializing");
 
@@ -124,11 +120,11 @@ namespace RadioController
 			controller_timer.AutoReset = false;
 			controller_timer.Elapsed += HandleClockEvent;
 
-			this.songs   = new MediaFolder(songFolder);
+			this.songs = new MediaFolder(songFolder);
 			this.jingles = new MediaFolder(jingleFolder);
-			this.news    = new MediaFolder(newsFolder);
+			this.news = new MediaFolder(newsFolder);
 
-			this.newsTrigger   = newsTrigger;
+			this.newsTrigger = newsTrigger;
 			this.jingleTrigger = jingleTrigger;
 
 			this.liveURL = liveURL;
@@ -139,7 +135,7 @@ namespace RadioController
 			changeState("Idle");
 		}
 
-		void changeState (string state) {
+		void changeState(string state) {
 			controller_state = state;
 			Logger.LogInformation("Controller changed state to: " + state);
 		}
@@ -173,10 +169,11 @@ namespace RadioController
 		public void fadeOut() {
 			if (currentElement != null) {
 				// TODO: fix new tracks fading in, wjile fading out
-				mixer.FadeTo(currentElement, 0f, SecondsSpentFading, (Mplayer pl) => {Pause();});
+				mixer.FadeTo(currentElement, 0f, SecondsSpentFading, (Mplayer pl) => {
+					Pause();});
 			}
 		}
-		
+
 		public void fadeIn() {
 			if (currentElement != null) {
 				currentElement.Play();
@@ -206,7 +203,8 @@ namespace RadioController
 			if (currentElement != null) {
 				if (doFade) {
 					if (lastState != ControllerAction.Jingle) {
-						mixer.FadeTo (currentElement, 0f, SecondsSpentFading, (Mplayer pl) => {pl.Dispose();});
+						mixer.FadeTo(currentElement, 0f, SecondsSpentFading, (Mplayer pl) => {
+							pl.Dispose();});
 					}
 				} else {
 					currentElement.Dispose();
@@ -216,7 +214,7 @@ namespace RadioController
 			currentElement = player;
 
 			if (currentElement != null) {
-				currentElement.Play ();
+				currentElement.Play();
 				if (doFade && currentState != ControllerAction.Jingle) {
 					mixer.FadeTo(currentElement, 100f, SecondsSpentFading);
 				} else {
@@ -234,7 +232,7 @@ namespace RadioController
 				islive = true;
 				currentState = ControllerAction.Live;
 
-				setMPlayer(new Mplayer (liveURL));
+				setMPlayer(new Mplayer(liveURL));
 
 			} else if (toggleServer.State == false && currentState == ControllerAction.Live) {
 				//Go Dead
@@ -248,10 +246,10 @@ namespace RadioController
 			jingleTrigger.checkTriggers();
 
 			if (!islive) {
-				if (	(currentElement == null)
-				    	|| (!currentElement.StillAlive)
-				    	|| (doFade && (currentElement.Length.Subtract(currentElement.Position) <= TimeSpan.FromSeconds(SecondsSpentFading)))
-				    	|| (sample > 0 && (currentElement.Position.Seconds > sample)) ) {
+				if ((currentElement == null)
+					|| (!currentElement.StillAlive)
+					|| (doFade && (currentElement.Length.Subtract(currentElement.Position) <= TimeSpan.FromSeconds(SecondsSpentFading)))
+					|| (sample > 0 && (currentElement.Position.Seconds > sample))) {
 
 					lastState = currentState;
 
@@ -293,8 +291,8 @@ namespace RadioController
 						newPlayer = new Mplayer(nextNews.Path);
 						break;
 					case ControllerAction.Song:
-						MediaFile mf = songs.pickRandomFile ();
-						Logger.LogNormal ("Now playing: " + mf.MetaData.ToString ());
+						MediaFile mf = songs.pickRandomFile();
+						Logger.LogNormal("Now playing: " + mf.MetaData.ToString());
 						newPlayer = new Mplayer(mf.Path);
 						break;
 					case ControllerAction.Idle:

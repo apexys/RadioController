@@ -8,7 +8,6 @@ namespace RadioController
 	public class Mixer
 	{
 		public static int CLOCK_INTERVAL_MILISECONDS = 250;
-
 		//Timer clock;
 		List<FaderTask> fades;
 
@@ -22,7 +21,8 @@ namespace RadioController
 			clock.Elapsed += HandleClockEvent;
 			clock.Start();
 			*/
-			Task.Run(() => {HandleClockEvent();});
+			Task.Run(() => {
+				HandleClockEvent();});
 		}
 
 		public void FadeTo(Mplayer player, float targetVolume, float seconds) {
@@ -32,11 +32,11 @@ namespace RadioController
 			ft.player    = player;
 			ft.endAction = null;
 			ft.endVolume = targetVolume;
-			ft.stepsLeft = (int) ((seconds * 1000f) / (float) CLOCK_INTERVAL_MILISECONDS);
+			ft.stepsLeft = (int)((seconds * 1000f) / (float)CLOCK_INTERVAL_MILISECONDS);
 			ft.step      = ((ft.endVolume - player.Volume) * CLOCK_INTERVAL_MILISECONDS) / (seconds * 1000f);
 			fades.Add(ft);
 
-			Logger.LogNormal("Fading "+ player.Volume.ToString() + " to " + targetVolume.ToString());
+			Logger.LogNormal("Fading " + player.Volume.ToString() + " to " + targetVolume.ToString());
 		}
 
 		public void FadeTo(Mplayer player, float targetVolume, float seconds, Action<Mplayer> endAction) {
@@ -46,15 +46,14 @@ namespace RadioController
 			ft.player    = player;
 			ft.endAction = endAction;
 			ft.endVolume = targetVolume;
-			ft.stepsLeft = (int) ((seconds * 1000f) / (float) CLOCK_INTERVAL_MILISECONDS);
+			ft.stepsLeft = (int)((seconds * 1000f) / (float)CLOCK_INTERVAL_MILISECONDS);
 			ft.step      = ((ft.endVolume - player.Volume) * CLOCK_INTERVAL_MILISECONDS) / (seconds * 1000f);
 			fades.Add(ft);
 
-			Logger.LogNormal("Fading "+ player.Volume.ToString() + " to " + targetVolume.ToString());
+			Logger.LogNormal("Fading " + player.Volume.ToString() + " to " + targetVolume.ToString());
 		}
-
 		//void HandleClockEvent (object sender, ElapsedEventArgs e) {
-		async void HandleClockEvent () {
+		async void HandleClockEvent() {
 			//Handle Fades
 			//clock.Stop();
 
@@ -74,23 +73,24 @@ namespace RadioController
 						}
 					} else {
 						// fade one step
-						fades [i].player.Volume += fades [i].step;
-						Logger.LogDebug ("Mixer fading: " + fades [i].player.Volume.ToString ());
+						fades[i].player.Volume += fades[i].step;
+						Logger.LogDebug("Mixer fading: " + fades[i].player.Volume.ToString());
 					}
 
-					fades [i].stepsLeft--;
+					fades[i].stepsLeft--;
 				}
 
 				foreach (FaderTask finished in fadesToRemove) {
-					fades.Remove (finished);
+					fades.Remove(finished);
 				}
-				await Task.Delay (CLOCK_INTERVAL_MILISECONDS);
+				await Task.Delay(CLOCK_INTERVAL_MILISECONDS);
 			}
 			//clock.Start();
 		}
 	}
 
-	class FaderTask {
+	class FaderTask
+	{
 		public Mplayer player;
 		public int stepsLeft;
 		public float endVolume;
