@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioPlayer", "RadioPlayer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioLogger", "Logger\RadioLogger.csproj", "{8C51D53E-B7F3-4EC2-A53A-52F31EF0B12F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Settings\Configuration.csproj", "{3A7A717D-6EC1-4757-9887-F8DEEB1CA933}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{3A7A717D-6EC1-4757-9887-F8DEEB1CA933}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
