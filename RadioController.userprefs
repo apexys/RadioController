@@ -1,30 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RadioController/Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RadioController/Main.cs">
     <Files>
-      <File FileName="RadioController/Main.cs" Line="1" Column="1" />
-      <File FileName="RadioController/Mplayer.cs" Line="19" Column="28" />
-      <File FileName="RadioController/AudioMetaData.cs" Line="1" Column="1" />
-      <File FileName="RadioController/Mixer.cs" Line="1" Column="1" />
-      <File FileName="RadioController/Controller.cs" Line="212" Column="30" />
-      <File FileName="RadioController/Logger.cs" Line="22" Column="28" />
-      <File FileName="RadioController/Tests.cs" Line="1" Column="1" />
-      <File FileName="RadioController/ControllerConfiguration.cs" Line="1" Column="1" />
-      <File FileName="RadioController/RandomController.cs" Line="1" Column="1" />
-      <File FileName="RadioController/RandomShow.cs" Line="1" Column="1" />
-      <File FileName="RadioController/Globals.cs" Line="1" Column="1" />
-      <File FileName="RadioController/MediaFolder.cs" Line="1" Column="1" />
-      <File FileName="RadioController/TimedTrigger.cs" Line="1" Column="1" />
-      <File FileName="RadioController/MediaFile.cs" Line="1" Column="1" />
-      <File FileName="RadioController/HTTPServer.cs" Line="1" Column="1" />
+      <File FileName="RadioController/Main.cs" Line="14" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="RadioController" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="UserInterface" expanded="True" />
-            <Node name="Controller.cs" selected="True" />
+            <Node name="Main.cs" selected="True" />
           </Node>
         </State>
       </Pad>
