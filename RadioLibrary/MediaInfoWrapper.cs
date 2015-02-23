@@ -13,9 +13,12 @@ namespace RadioLibrary
 		public static AudioMetaData getMetadata(string path){
 			Process process = new Process();
 			process.StartInfo.FileName = "mediainfo";
-			process.StartInfo.Arguments = "\"" + path + "\"";
+
+			process.StartInfo.Arguments = "'" + path.Replace("\\", "\\\\").Replace("'", "\\'") + "'";
 			process.StartInfo.UseShellExecute = false;
 			process.StartInfo.RedirectStandardOutput = true;
+			process.StartInfo.RedirectStandardError = true;
+			process.StartInfo.RedirectStandardInput = true;
 			process.StartInfo.CreateNoWindow = true;
 
 			process.Start ();
