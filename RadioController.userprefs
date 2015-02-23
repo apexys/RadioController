@@ -1,25 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RadioPlayer/Mplayer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RadioPlayer/VLCProcess.cs">
     <Files>
       <File FileName="RadioController/Main.cs" Line="1" Column="1" />
-      <File FileName="RadioPlayer/VLCProcess.cs" Line="28" Column="44" />
-      <File FileName="RadioPlayer/Mplayer.cs" Line="217" Column="38" />
+      <File FileName="RadioPlayer/VLCProcess.cs" Line="72" Column="10" />
+      <File FileName="RadioPlayer/ISoundObject.cs" Line="10" Column="24" />
+      <File FileName="RadioLibrary/MediaInfoWrapper.cs" Line="15" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Configuration" expanded="True" />
-          <Node name="RadioController" expanded="True" />
+          <Node name="RadioLibrary" expanded="True" />
           <Node name="RadioPlayer" expanded="True">
-            <Node name="ISoundObject.cs" selected="True" />
+            <Node name="VLCProcess.cs" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/student/Share/git/RadioController/RadioLibrary/MediaInfoWrapper.cs" line="14" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="RadioController/Controller.cs" line="139" offsetX="462" offsetY="2484" expression="nextState" liveUpdate="False" />
