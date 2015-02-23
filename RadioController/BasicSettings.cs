@@ -56,10 +56,16 @@ namespace RadioController.Configuration
 			return f;
 		}
 
+		// Arrays
 		public string[] getStrings(string s, string[] init) {
 			try {
-				// TODO: better init value
-				return JSON.readStringArray(getString(s, ""));
+				return JSON.readArray<string>(getString(s, JSON.write(init)), JSON.readString);
+			} catch {}
+			return init;
+		}
+		public int[] getInts(string s, int[] init) {
+			try {
+				return JSON.readArray<int>(getString(s, JSON.write(init)), JSON.readInt);
 			} catch {}
 			return init;
 		}

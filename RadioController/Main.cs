@@ -14,14 +14,17 @@ namespace RadioController
 		public static void Main(string[] args) {
 
 			Settings.setSettings(new FileSettings("../../../Settings.conf"));
-			Settings.setString("hello.123", "hi");
 
 			/*
 			foreach (KeyValuePair<string, string> pair in ((FileSettings)(Settings.getSettings())).config) {
 				Logger.LogGood(pair.Key + " => " + pair.Value);
 			}
 			Logger.LogGood("int: " + Settings.getInt("vlc.start", 2).ToString());
-			*/
+			//*/
+
+			FileInfo fi = new FileInfo("../");
+			Console.WriteLine(fi.Directory + " -/- " + fi.Directory.Name  + " -/- " + fi.Directory.FullName);
+
 
 			string[] songs = Settings.getStrings("media.songs", new string[] {"hi"});
 			string[] jingles = Settings.getStrings("media.jingles", new string[] {"hi"});
@@ -41,14 +44,16 @@ namespace RadioController
 
 			//2. Create a Controller
 			TimedTrigger jinglett = new TimedTrigger();
-			jinglett.addMinuteTrigger(0);
-			jinglett.addMinuteTrigger(15);
-			jinglett.addMinuteTrigger(30);
-			jinglett.addMinuteTrigger(45);
-
+			int[] trigger = Settings.getInts("trigger.jingles", new int[] {0, 15, 30, 45});
+			for (int t = 0; t < trigger.Length; t++) {
+				jinglett.addMinuteTrigger(trigger[t]);
+			}
+			
 			TimedTrigger newstt = new TimedTrigger();
-			newstt.addMinuteTrigger(0);
-			newstt.addMinuteTrigger(30);
+			trigger = Settings.getInts("trigger.news", new int[] {0, 30});
+			for (int t = 0; t < trigger.Length; t++) {
+				newstt.addMinuteTrigger(trigger[t]);
+			}
 
 			//string basepath = "/home/apexys/content"; // @"/home/streamer/radiosoftware/content";
 

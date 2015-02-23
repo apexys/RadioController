@@ -1,3 +1,4 @@
-RadioController/bin
+**/bin
+MediaFolders.conf
 *.cs~
 

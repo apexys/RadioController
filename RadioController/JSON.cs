@@ -10,10 +10,13 @@ namespace RadioController
 		public JSON() {
 		}
 
+		public delegate T inputConverter<T>(string str, ref int pos);
+
 		public static string write(string[] arr) {
 			StringBuilder res = new StringBuilder();
 			int i, j, len;
 			string str;
+			bool first = true;
 
 			res.Append("[ ");
 			for (i=0; i<arr.Length; i++) {
@@ -21,9 +24,11 @@ namespace RadioController
 					continue;
 				}
 
-				if (i != 0) {
+				if (!first) {
+					first = false;
 					res.Append(", ");
 				}
+
 				res.Append('"');
 				str = arr[i];
 				len = str.Length;
@@ -57,7 +62,24 @@ namespace RadioController
 			return res.ToString();
 		}
 
+		public static string write(int[] arr) {
+			StringBuilder res = new StringBuilder();
+			int i;
 
+			res.Append("[ ");
+			for (i=0; i<arr.Length; i++) {
+				if (i != 0) {
+					res.Append(", ");
+				}
+				res.Append(arr[i]);
+			}
+			res.Append(" ]");
+
+			return res.ToString();
+		}
+
+
+		// reading
 		public static string readString(string str) {
 			int pos = 0;
 			return readString(str, ref pos);
@@ -119,14 +141,39 @@ namespace RadioController
 			}
 			throw new InvalidCastException("no JSON string found");
 		}
-		
-		public static string[] readStringArray(string str) {
+
+		public static int readInt(string str) {
 			int pos = 0;
-			return readStringArray(str, ref pos);
+			return readInt(str, ref pos);
 		}
-		public static string[] readStringArray(string str, ref int pos) {
+		public static int readInt(string str, ref int pos) {
+			int number = 0;
 			int len = str.Length;
-			List<string> res;
+
+			// skip space
+			while (pos < len && (str[pos] == ' ' || str[pos] == '\t')) {
+				pos++;
+			}
+
+			if (pos > len || str[pos] < '0' || str[pos] > '9') {
+				throw new InvalidCastException("not a JSON int");
+			}
+
+			while (pos < len && str[pos] >= '0' && str[pos] <= '9') {
+				number *= 10;
+				number += str[pos] - '0';
+				pos++;
+			}
+			return number;
+		}
+		
+		public static T[] readArray<T>(string str, inputConverter<T> reader) {
+			int pos = 0;
+			return readArray<T>(str, ref pos, reader);
+		}
+		public static T[] readArray<T>(string str, ref int pos, inputConverter<T> reader) {
+			int len = str.Length;
+			List<T> res;
 
 			// skip space
 			while (pos < len && (str[pos] == ' ' || str[pos] == '\t')) {
@@ -134,12 +181,12 @@ namespace RadioController
 			}
 
 			if (pos < len && str[pos] == '[') {
-				res = new List<string>();
+				res = new List<T>();
 				pos++;
 
 				while (true) {
 
-					res.Add(readString(str, ref pos));
+					res.Add(reader(str, ref pos));
 
 					// skip space
 					while (pos < len && (str[pos] == ' ' || str[pos] == '\t')) {

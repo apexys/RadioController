@@ -10,6 +10,7 @@ namespace RadioController.Configuration
 		string[] getStrings(string s, string[] init);
 		bool getBool(string s, bool init);
 		int getInt(string s, int i);
+		int[] getInts(string s, int[] i);
 		float getFloat(string s, float f);
 	}
 }

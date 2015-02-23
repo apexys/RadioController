@@ -50,6 +50,13 @@ namespace RadioController.Configuration
 				return conf.getInt(s, init);
 			}
 		}
+		public static int[] getInts(string s, int[] init) {
+			if (conf == null) {
+				return init;
+			} else {
+				return conf.getInts(s, init);
+			}
+		}
 		public static float getFloat(string s, float init) {
 			if (conf == null) {
 				return init;
