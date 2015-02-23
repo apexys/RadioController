@@ -58,7 +58,6 @@
     <Compile Include="MediaFile.cs" />
     <Compile Include="HTTPServer.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="ISoundObject.cs" />
     <Compile Include="IMixer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -76,7 +75,7 @@
       <Project>{8C51D53E-B7F3-4EC2-A53A-52F31EF0B12F}</Project>
       <Name>RadioLogger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Settings\Configuration.csproj">
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
       <Project>{3A7A717D-6EC1-4757-9887-F8DEEB1CA933}</Project>
       <Name>Configuration</Name>
     </ProjectReference>

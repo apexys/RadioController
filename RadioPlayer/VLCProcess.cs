@@ -5,7 +5,7 @@ using Configuration;
 
 namespace RadioPlayer
 {
-	public class VLCProcess
+	public class VLCProcess : ISoundObject
 	{
 		Process process;
 		StreamReader sout;
@@ -24,7 +24,7 @@ namespace RadioPlayer
 			process.StartInfo.UseShellExecute = false;
 			process.StartInfo.RedirectStandardInput = true;
 			process.StartInfo.RedirectStandardOutput = true;
-			process.StartInfo.RedirectStandardError = true;
+			//process.StartInfo.RedirectStandardError = true;
 			process.StartInfo.CreateNoWindow = true;
 			process.EnableRaisingEvents = true;
 
@@ -40,6 +40,7 @@ namespace RadioPlayer
 			length = new TimeSpan(0, 0, 0);
 
 			metadata = new AudioMetaData();
+
 
 		}
 	}
