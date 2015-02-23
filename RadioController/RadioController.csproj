@@ -60,10 +60,11 @@
     <Compile Include="HTTPServer.cs" />
     <Compile Include="BasicSettings.cs" />
     <Compile Include="FileSettings.cs" />
-    <Compile Include="IPlayerConnection.cs" />
     <Compile Include="ISettings.cs" />
     <Compile Include="JSON.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="ISoundObject.cs" />
+    <Compile Include="IMixer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
