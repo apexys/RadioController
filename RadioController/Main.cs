@@ -119,6 +119,9 @@ namespace RadioController
 						Logger.LogNormal("Skipping current action");
 						ctrl.Skip();
 						break;
+					case "vlc":
+						VLCMixer.mixer.getCurrentPlayers()[int.Parse(input[1])].debugProcess();
+						break;
 					default:
 						break; //Nothing to do here
 					}

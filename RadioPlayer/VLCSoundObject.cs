@@ -10,18 +10,17 @@ namespace RadioPlayer
 		bool playing;
 		TimeSpan duration;
 		float volume;
-		public VLCSoundObject (MediaFile mf, VLCProcess vlcp)
-		{
+
+		public VLCSoundObject(MediaFile mf, VLCProcess vlcp) {
 			this.mf = mf;
 			this.vlcp = vlcp;
-			vlcp.setFile (mf);
+			vlcp.setFile(mf);
 			playing = false;
 			duration = TimeSpan.FromSeconds(Convert.ToDouble(vlcp.getLength()));
-			volume = Convert.ToSingle (vlcp.getVolume ());
+			volume = Convert.ToSingle(vlcp.getVolume());
 		}
 
 		#region ISoundObject implementation
-
 		public float Volume {
 			get {
 				return volume;
@@ -29,7 +28,7 @@ namespace RadioPlayer
 			set {
 				if (value != volume) {
 					volume = value;
-					vlcp.setVolume (Convert.ToInt32 (value));
+					vlcp.setVolume(Convert.ToInt32(value));
 				}
 			}
 		}
@@ -39,12 +38,13 @@ namespace RadioPlayer
 				return playing;
 			}
 			set {
+				RadioLogger.Logger.LogGood("Playing = "+value.ToString());
 				if (value != playing) {
 					if (value) {
-						vlcp.play ();
+						vlcp.play();
 						playing = true;
 					} else {
-						vlcp.pause ();
+						vlcp.pause();
 						playing = false;
 					}
 				}
@@ -53,10 +53,10 @@ namespace RadioPlayer
 
 		public TimeSpan Position {
 			get {
-				return TimeSpan.FromSeconds(Convert.ToDouble (vlcp.getPosition ()));
+				return TimeSpan.FromSeconds(Convert.ToDouble(vlcp.getPosition()));
 			}
 			set {
-				throw new NotImplementedException ();
+				throw new NotImplementedException();
 			}
 		}
 
@@ -71,7 +71,6 @@ namespace RadioPlayer
 				return mf.Name;
 			}
 		}
-
 		#endregion
 	}
 }

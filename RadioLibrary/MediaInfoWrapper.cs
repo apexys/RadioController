@@ -21,9 +21,9 @@ namespace RadioLibrary
 			process.StartInfo.RedirectStandardInput = true;
 			process.StartInfo.CreateNoWindow = true;
 
-			process.Start ();
+			process.Start();
 
-			process.WaitForExit ();
+			process.WaitForExit();
 
 			string output = process.StandardOutput.ReadToEnd ();
 
