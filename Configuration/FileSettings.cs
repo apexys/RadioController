@@ -85,6 +85,7 @@ namespace Configuration
 			try {
 				str = config[s];
 			} catch {
+				Logger.LogInformation("Missing config option for \""+s+"\"");
 				config.Add(s, init);
 				str = init;
 			}

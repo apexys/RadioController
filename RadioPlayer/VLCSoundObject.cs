@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using RadioLibrary;
 
 namespace RadioPlayer
@@ -12,14 +13,24 @@ namespace RadioPlayer
 		float volume;
 
 		public VLCSoundObject(MediaFile mf, VLCProcess vlcp) {
+			int i, d = 0;
 			this.mf = mf;
 			this.vlcp = vlcp;
 			vlcp.setFile(mf);
 			playing = false;
-			duration = TimeSpan.FromSeconds(Convert.ToDouble(vlcp.getLength()));
+			for (i=0; i<50; i++) {
+				d = vlcp.getLength();
+				if (d > 0) {
+					break;
+				}
+				if (d < 0) {
+					throw new ArgumentException("Sound not loaded");
+				}
+				Thread.Sleep(20);
+			}
+			duration = TimeSpan.FromSeconds(Convert.ToDouble(d));
 			volume = Convert.ToSingle(vlcp.getVolume());
 		}
-
 		#region ISoundObject implementation
 		public float Volume {
 			get {
@@ -38,7 +49,7 @@ namespace RadioPlayer
 				return playing;
 			}
 			set {
-				RadioLogger.Logger.LogGood("Playing = "+value.ToString());
+				RadioLogger.Logger.LogGood("Playing = " + value.ToString());
 				if (value != playing) {
 					if (value) {
 						vlcp.play();
@@ -56,7 +67,7 @@ namespace RadioPlayer
 				return TimeSpan.FromSeconds(Convert.ToDouble(vlcp.getPosition()));
 			}
 			set {
-				throw new NotImplementedException();
+				vlcp.setPosition(Convert.ToInt32(value.TotalSeconds));
 			}
 		}
 

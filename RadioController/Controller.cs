@@ -10,8 +10,7 @@ namespace RadioController
 {
 	public class Controller
 	{
-		// TODO: Config for Fading time
-		const int SecondsSpentFading = 3;
+		int SecondsSpentFading;
 		bool islive;
 		/*
 		bool isLive {
@@ -114,6 +113,8 @@ namespace RadioController
 		}
 
 		public Controller(string songFolder, string jingleFolder, string newsFolder, TimedTrigger jingleTrigger, TimedTrigger newsTrigger, string liveURL) {
+			SecondsSpentFading = Configuration.Settings.getInt("mixer.fadetime", 3);
+
 			//Basic state
 			changeState("Initializing");
 
@@ -123,9 +124,9 @@ namespace RadioController
 			controller_timer.AutoReset = false;
 			controller_timer.Elapsed += HandleClockEvent;
 
-			this.songs = new MediaFolder(songFolder);
-			this.jingles = new MediaFolder(jingleFolder);
-			this.news = new MediaFolder(newsFolder);
+			//this.songs = new MediaFolder(songFolder);
+			//this.jingles = new MediaFolder(jingleFolder);
+			//this.news = new MediaFolder(newsFolder);
 
 			this.newsTrigger = newsTrigger;
 			this.jingleTrigger = jingleTrigger;
@@ -209,6 +210,7 @@ namespace RadioController
 			if (currentElement != null) {
 				currentElement.Playing = true;
 				if (doFade && currentState != ControllerAction.Jingle) {
+					currentElement.Volume = 0;
 					mixer.fadeTo(currentElement, 100f, SecondsSpentFading);
 				} else {
 					currentElement.Volume = 100f;

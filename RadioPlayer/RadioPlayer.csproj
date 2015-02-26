@@ -40,6 +40,8 @@
     <Compile Include="IMixer.cs" />
     <Compile Include="VLCMixer.cs" />
     <Compile Include="VLCSoundObject.cs" />
+    <Compile Include="ISoundObjectProvider.cs" />
+    <Compile Include="MediafileToSoundObjectProvider.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

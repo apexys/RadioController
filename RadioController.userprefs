@@ -1,13 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RadioPlayer/VLCProcess.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RadioPlayer/VLCMixer.cs">
     <Files>
-      <File FileName="RadioController/Main.cs" Line="14" Column="43" />
-      <File FileName="RadioPlayer/VLCProcess.cs" Line="48" Column="28" />
-      <File FileName="RadioPlayer/ISoundObject.cs" Line="1" Column="1" />
-      <File FileName="RadioLibrary/MediaInfoWrapper.cs" Line="1" Column="1" />
-      <File FileName="RadioPlayer/VLCSoundObject.cs" Line="26" Column="19" />
-      <File FileName="Logger/Logger.cs" Line="66" Column="1" />
+      <File FileName="RadioController/Main.cs" Line="110" Column="28" />
+      <File FileName="RadioPlayer/VLCProcess.cs" Line="97" Column="1" />
+      <File FileName="RadioPlayer/VLCSoundObject.cs" Line="59" Column="5" />
+      <File FileName="RadioPlayer/VLCMixer.cs" Line="14" Column="3" />
+      <File FileName="RadioController/Controller.cs" Line="4" Column="17" />
+      <File FileName="RadioLibrary/AudioMetaData.cs" Line="32" Column="1" />
+      <File FileName="Logger/Logger.cs" Line="32" Column="4" />
+      <File FileName="RadioController/BasicController.cs" Line="89" Column="1" />
+      <File FileName="RadioController/IController.cs" Line="17" Column="5" />
+      <File FileName="RadioLibrary/MediaFolder.cs" Line="42" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,9 +20,15 @@
           <Node name="RadioLibrary" expanded="True" />
           <Node name="RadioLogger" expanded="True" />
           <Node name="RadioPlayer" expanded="True">
-            <Node name="VLCProcess.cs" selected="True" />
+            <Node name="VLCMixer.cs" selected="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

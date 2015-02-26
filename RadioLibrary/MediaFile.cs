@@ -7,33 +7,54 @@ namespace RadioLibrary
 	public class MediaFile
 	{
 		string path;
-		public string Path{
-			get{
+
+		public string Path {
+			get {
 				return path;
 			}
 		}
 
 		string name;
-		public string Name{
-			get{
+
+		public string Name {
+			get {
 				return name;
 			}
 		}
 
-		AudioMetaData metaData;
-		public AudioMetaData MetaData{
-			get{
-				return metaData.Clone ();
+		public enum MediaType
+		{
+			Normal,
+			Jingle
+		}
+
+		private MediaType type;
+
+		public MediaType Type {
+			get {
+				return type;
 			}
 		}
 
-		public MediaFile (string path)
-		{
+		AudioMetaData metaData;
+
+		public AudioMetaData MetaData {
+			get {
+				return metaData.Clone();
+			}
+		}
+
+		public MediaFile(string path, MediaType type) :
+			this(path, MediaType.Normal) {
+		}
+
+		public MediaFile(string path, MediaType type) {
 			this.path = path;
+			this.type = type;
 
-			name = new FileInfo (path).Name;
+			name = new FileInfo(path).Name;
 
-			metaData = MediaInfoWrapper.getMetadata (path);
+			metaData = MediaInfoWrapper.getMetadata(path);
 		}
 	}
 }

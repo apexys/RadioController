@@ -156,7 +156,7 @@ namespace Configuration
 			}
 
 			if (pos > len || str[pos] < '0' || str[pos] > '9') {
-				throw new InvalidCastException("not a JSON int");
+				throw new InvalidCastException("not a JSON int '"+str[pos]+"'("+pos+")");
 			}
 
 			while (pos < len && str[pos] >= '0' && str[pos] <= '9') {
@@ -200,6 +200,7 @@ namespace Configuration
 					if (str[pos] == ']') {
 						return res.ToArray();
 					}
+					pos++;
 				}
 			} else {
 				throw new InvalidCastException("incorrect JSON string array");

@@ -18,9 +18,15 @@ namespace RadioPlayer
 		bool kill = false;
 		float volumeAdjustment = 1f;
 		public StreamWriter debugStream;
+		string id;
+		Object communicationLock = new object();
 
-		public VLCProcess() {
+		public VLCProcess(string id) {
+			this.id = id;
+			createProcess();
+		}
 
+		void createProcess() {
 			process = new Process();
 			process.StartInfo.FileName = Settings.getString("vlc.cmd_prog", "cvlc");
 			process.StartInfo.Arguments = Settings.getString("vlc.cmd_args", "-I rc");
@@ -39,18 +45,17 @@ namespace RadioPlayer
 
 			sout = process.StandardOutput;
 
-			sin = new DebugWrite(sin.BaseStream);
-			sin.AutoFlush = true;
-			debugStream = new StreamWriter(Console.OpenStandardOutput());
 
+			// Debug:
+			//sin = new DebugWrite(sin.BaseStream, id);
+			//sin.AutoFlush = true;
+			//debugStream = new StreamWriter(Console.OpenStandardOutput());
+			//debugStream.AutoFlush = true;
 
-			//debugProcess();
-			// this call can throw an error
+			string data = getData(null);
+			string version = data.Substring(0, data.IndexOfAny(new char[] { '\n', '\r' }));
 
-			string data = getData();
-			string version = data.Substring(0, data.IndexOfAny(new char[] {'\n', '\r'}));
-
-			Logger.LogInformation("VLC version " + version);
+			Logger.LogInformation("VLC [" + id + "] version " + version);
 		}
 
 		~VLCProcess () {
@@ -58,14 +63,14 @@ namespace RadioPlayer
 		}
 
 		public void Dispose() {
-			Logger.LogInformation("VLCProcess got Disposed");
+			Logger.LogInformation("VLCProcess [" + id + "] got Disposed");
 			kill = true;
 			try {
 				sin.WriteLine("shutdown");
 				Task.Run(async () => {
 					await Task.Delay(1000);
 					if (!process.HasExited) {
-						Logger.LogWarning("VLCProcess didn't stop properly");
+						Logger.LogWarning("VLCProcess [" + id + "] didn't stop properly");
 						process.Kill();
 					}
 				});
@@ -74,49 +79,46 @@ namespace RadioPlayer
 		}
 
 		public void setFile(MediaFile mf) {
-			sin.WriteLine(
-				"clear\n" +
-				"enqueue " + mf.Path);
-			dropData();
-			dropData();
+			dropData("clear");
+			dropData("add " + mf.Path);
+			dropData("pause");
+			dropData("seek 0");
 		}
 
 		public void play() {
-			sin.WriteLine("play");
-			dropData();
+			dropData("play");
 		}
 
 		public void pause() {
-			sin.WriteLine("pause");
-			dropData();
+			dropData("pause");
 		}
 
 		public int getPosition() {
-			sin.WriteLine("get_time");
-			string s = getData();
+			string s = getData("get_time");
 			if (s == "") {
-				return 0;
+				return -1;
 			}
-			return int.Parse(s);
+			return Convert.ToInt32(s);
 		}
 
 		public int getLength() {
-			sin.WriteLine("get_length");
-			string s = getData();
+			string s = getData("get_length");
 			if (s == "") {
-				return 0;
+				return -1;
 			}
-			return int.Parse(s);
+			return Convert.ToInt32(s);
+		}
+
+		public void setPosition(int sec) {
+			dropData("seek " + sec);
 		}
 
 		public void setVolume(int volume) {
-			sin.WriteLine("volume " + ((int)(volume * volumeAdjustment)).ToString());
-			dropData();
+			dropData("volume " + (Convert.ToInt32(volume * volumeAdjustment)).ToString());
 		}
 
 		public int getVolume() {
-			sin.WriteLine("volume");
-			return (int)(int.Parse(getData()) / volumeAdjustment);
+			return Convert.ToInt32(Convert.ToSingle(getData("volume")) / volumeAdjustment);
 		}
 
 		void debugStreamPeek(StreamReader s) {
@@ -128,43 +130,43 @@ namespace RadioPlayer
 			string[] sp;
 			bool run = true;
 
-			//Task.Run(() => { while (true) {Logger.LogGood("Data: "+getData());} } );
-
 			while (run) {
 				str = Console.ReadLine();
 				sp = str.Split(new char[] { ' ' }, 2);
 				sp[0] = sp[0].ToLower();
 
 				switch (sp[0]) {
+				case "volumeAdjustment":
+					if (sp.Length > 1) {
+						try {
+							volumeAdjustment = Convert.ToSingle(sp[1]);
+						} catch {
+						}
+					}
+					break;
 				case "volume":
 					if (sp.Length > 1) {
-						sin.WriteLine("volume " + int.Parse(sp[1]).ToString());
+						dropData("volume " + int.Parse(sp[1]).ToString());
 					} else {
-						sin.WriteLine("volume");
-						Console.WriteLine(getData());
+						Console.WriteLine(getData("volume"));
 					}
 					break;
 				case "seek":
-				case "goto":
 					if (sp.Length > 1) {
-						sin.WriteLine(sp[0] + " " + int.Parse(sp[1]).ToString());
-						dropData();
-						sin.WriteLine("get_time");
-						Console.WriteLine(getData());
-						Thread.Sleep(500);
-						sin.WriteLine("get_time");
-						Console.WriteLine(getData());
+						dropData(sp[0] + " " + int.Parse(sp[1]).ToString());
+						Console.WriteLine(getData("get_time"));
+						Thread.Sleep(100);
+						Console.WriteLine(getData("get_time"));
 
 					}
 					break;
 				case "add":
 					if (sp.Length > 1) {
-						sin.WriteLine("enqueue " + new FileInfo(Settings.getStrings("media.songs", new string[] { "./" })[0] + sp[1]).FullName);
+						dropData("enqueue " + new FileInfo(Settings.getString("vlc.debug.mediaBaseFolder", "./") + sp[1]).FullName);
 					}
-					dropData();
 					break;
 				case "get_time":
-					Logger.LogInformation("Position: " + getPosition().ToString());
+					Console.WriteLine(getPosition());
 					break;
 				case "get_length":
 				case "play":
@@ -173,73 +175,111 @@ namespace RadioPlayer
 				case "clear":
 				case "status":
 				case "playlist":
-					sin.WriteLine(sp[0]);
-					Console.WriteLine(getData());
+					Console.WriteLine(getData(sp[0]));
 					break;
 				case "exit":
 					run = false;
 					break;
+				case "?":
+				case "help":
+					Console.WriteLine(
+						"The VLC interface supports the following commands:\n" +
+						"volumeAdjustment <factor>\n" +
+						"volume\n" +
+						"volume <new volume>\n" +
+						"seek <to second>\n" +
+						"add <sound source>\n" +
+						"get_time\n" +
+						"get_length\n" +
+						"play\n" +
+						"pause\n" +
+						"shutdown\n" +
+						"clear\n" +
+						"status\n" +
+						"playlist\n" +
+						"exit");
+					break;
 				}
 
 			}
 		}
 
-		string getData() {
+		string getData(string command) {
 			string s;
 			int i = 0;
 			char c;
-
 			StringBuilder sb = new StringBuilder();
 
-			while (!sout.EndOfStream && i<2) {
-				c = (char)sout.Read();
-				if (c == '>') {
-					i = 1;
-				} else if (i == 1 && c == ' ') {
-					break;
+			lock (communicationLock) {
+				// special handling to get the init help text
+				if (command != null) {
+					sin.WriteLine(command);
 				}
-				sb.Append(c);
-			}
 
+				while (!sout.EndOfStream) {
+					c = (char)sout.Read();
+					if (c == '>') {
+						i = 1;
+					} else if (i == 1 && c == ' ') {
+						i = 2;
+						break;
+					}
+					sb.Append(c);
+				}
+			}
 			sb.Remove(sb.Length - 1, 1);
-			s = sb.ToString();
+			s = sb.ToString().Trim(new char[] { '\r', '\n', ' ', '\t' });
 			
-			if (debugStream != null) {
-				debugStream.WriteLine(s.Replace("\033", "ESC"));
+			if (debugStream != null && !kill) {
+				if (i < 2 && sout.EndOfStream) {
+					debugStream.WriteLine("VLC [" + id + "] <EOF> reached");
+				} else {
+					debugStream.WriteLine("VLC [" + id + "]" +
+						(command != null ? " (" + command + ")" : "") +
+						" Out: " + s.Replace("\033", "ESC"));
+				}
 			}
-
-			return s.Trim(new char[] { '\r', '\n', ' ', '\t' });
+			
+			return s;
 		}
 
-		void dropData() {
+		void dropData(string command) {
 			int i = 0;
 			char c;
 
-			while (!sout.EndOfStream && i<2) {
-				c = (char)sout.Read();
-				if (c == '>') {
-					i = 1;
-				} else if (i == 1 && c == ' ') {
-					break;
+			lock (communicationLock) {
+				sin.WriteLine(command);
+
+				while (!sout.EndOfStream && i<2) {
+					c = (char)sout.Read();
+					if (c == '>') {
+						i = 1;
+					} else if (i == 1 && c == ' ') {
+						break;
+					}
 				}
 			}
 		}
 
 		void exited(Object sender, EventArgs args) {
 			if (!kill) {
-				Logger.LogError("VLC exited unexpected");
+				Logger.LogError("VLC [" + id + "] exited unexpected");
+				createProcess();
 			}
+			kill = true;
 		}
 
 		class DebugWrite : StreamWriter
 		{
+			string id;
 
-			public DebugWrite(Stream stream) : base(stream) {
+			public DebugWrite(Stream stream, string id) : base(stream) {
+				this.id = id;
 			}
 
 			public override void WriteLine(string s) {
 				if (s != "get_time") {
-					Logger.LogInformation("VLC got: \"" + s + "\"");
+					Logger.LogInformation("VLC [" + id + "] got: \"" + s + "\"");
 				}
 				base.WriteLine(s);
 			}

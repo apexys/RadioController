@@ -1,21 +1,26 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
+using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Generic;
 using Configuration;
 using RadioPlayer;
+using RadioLibrary;
 using RadioLogger;
 
 namespace RadioController
 {
 	class MainClass
 	{
+		static MediaFolder songs;
+		static MediaFolder jingles;
+		static MediaFolder news;
 		public static void Main(string[] args) {
 
 			Settings.setSettings(new FileSettings("../../../Settings.conf"));
 
-			/*
+
 			foreach (KeyValuePair<string, string> pair in ((FileSettings)(Settings.getSettings())).config) {
 				Logger.LogGood(pair.Key + " => " + pair.Value);
 			}
@@ -23,40 +28,38 @@ namespace RadioController
 			//*/
 
 			FileInfo fi = new FileInfo("../");
-			Console.WriteLine(fi.Directory + " -/- " + fi.Directory.Name  + " -/- " + fi.Directory.FullName);
+			Console.WriteLine(fi.Directory + " -/- " + fi.Directory.Name + " -/- " + fi.Directory.FullName);
 
 
-			string[] songs = Settings.getStrings("media.songs", new string[] {"hi"});
-			string[] jingles = Settings.getStrings("media.jingles", new string[] {"hi"});
-			string[] news = Settings.getStrings("media.news", new string[] {"hi"});
+			string[] songFolders = Settings.getStrings("media.songs", new string[] {});
+			string[] jingleFolders = Settings.getStrings("media.jingles", new string[] {});
+			string[] newsFolders = Settings.getStrings("media.news", new string[] {});
 
-			/*
-			//1. Try to find a version of mplayer
-			Logger.LogNormal("Looking for mplayer...");
-			string mplayer_version = Mplayer.getVersion();
-			if (mplayer_version != "") {
-				Logger.LogGood(mplayer_version);
-			} else {
-				Logger.LogError("No mplayer found!");
-			}
-			Logger.LogLine();
-			Logger.LogDebug("Environment: " + Environment.CurrentDirectory);
-*/
 			//2. Create a Controller
 			TimedTrigger jinglett = new TimedTrigger();
-			int[] trigger = Settings.getInts("trigger.jingles", new int[] {0, 15, 30, 45});
+			int[] trigger = Settings.getInts("trigger.jingles", new int[] { 0, 15, 30, 45 });
 			for (int t = 0; t < trigger.Length; t++) {
 				jinglett.addMinuteTrigger(trigger[t]);
 			}
 			
 			TimedTrigger newstt = new TimedTrigger();
-			trigger = Settings.getInts("trigger.news", new int[] {0, 30});
+			trigger = Settings.getInts("trigger.news", new int[] { 0, 30 });
 			for (int t = 0; t < trigger.Length; t++) {
 				newstt.addMinuteTrigger(trigger[t]);
 			}
 
+			Task.Run(async () => {
+				while (true) {
+					jinglett.checkTriggers();
+					newstt.checkTriggers();
+					await Task.Delay(500);
+				}
+			});
+
+
 			//string basepath = "/home/apexys/content"; // @"/home/streamer/radiosoftware/content";
 
+			/*
 			Controller ctrl = new Controller(
 				songs[0],//basepath + Path.DirectorySeparatorChar + "songs",
 				jingles[0],//basepath + Path.DirectorySeparatorChar + "jingles",
@@ -65,6 +68,18 @@ namespace RadioController
 				newstt,
 				"http://134.245.206.50:8080/");
 			ctrl.Start();
+			*/
+
+			VLCMixer mixer = new VLCMixer();
+			songs = new MediaFolder(songFolders);
+			jingles = new MediaFolder(jingleFolders);
+			news = new MediaFolder(newsFolders);
+
+			IMediaFileProvider provider = new RandomMediaFileProvider(songs);
+			provider = new TimedTriggerMediaFileInserter(provider, jinglett, new RandomMediaFileProvider(jingles));
+			provider = new TimedTriggerMediaFileInserter(provider, newstt, new RandomMediaFileProvider(news));
+
+			IController ctrl = new BasicController(mixer, new MediafileToSoundObjectProvider(mixer, provider));
 
 			//3. Run for your life!
 			Console.Write("Everything running, type ");
@@ -76,15 +91,28 @@ namespace RadioController
 			interact(ctrl);
 		}
 
-		static void interact(Controller ctrl) {
+		static void interact(IController ctrl) {
 			while (true) {
 				string[] input = Console.ReadLine().Trim().Split(' ');
 				if (input.Length > 0) {
 					switch (input[0].ToLower()) {
+					case "?":
+					case "help":
+						Console.WriteLine(
+							"The following commands are currently available\n" +
+							"s(top)\n" +
+							"p(lay)/start\n" +
+							"h/pause\n" +
+							"f(ade)i(n)\n" +
+							"f(ade)o(ut)\n" +
+							"rescan\n" +
+							"skip\n" +
+							"vlc <id>");
+						break;
 					case "exit":
 						Console.WriteLine("Terminting program");
 						//TODO: Make sure all mplayers DIE here
-						ctrl.Dispose();
+						//ctrl.Dispose();
 						Environment.Exit(0);
 						break;
 					case "s":
@@ -111,10 +139,13 @@ namespace RadioController
 					case "rescan":
 						Logger.LogNormal("Rescanning media collection");
 						// Retraverse Meida Directory
-						ctrl.Rescan();
-						Logger.LogNormal("Scan done");
-						Logger.LogLine();
-						break;
+						songs.Refresh();
+						jingles.Refresh();
+						news.Refresh();
+					///ctrl.Rescan();
+					//Logger.LogNormal("Scan done");
+					//Logger.LogLine();
+					//break;
 					case "skip":
 						Logger.LogNormal("Skipping current action");
 						ctrl.Skip();

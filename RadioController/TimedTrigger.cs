@@ -43,6 +43,7 @@ namespace RadioController
 					if (MinuteTriggers[i] == minute) {
 						lastTrigger = MinuteTriggers[i];
 						previousTriggerChanged = true;
+						Console.WriteLine("Trigger");
 						break;
 					}
 				}

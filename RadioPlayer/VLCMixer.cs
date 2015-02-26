@@ -7,14 +7,15 @@ namespace RadioPlayer
 	public class VLCMixer : IMixer
 	{
 		VLCProcess[] vlcprocs;
-		int nextProc;
+		// TODO: remove public modifyer
+		public int nextProc;
 		// TODO: remove
 		public static VLCMixer mixer;
 
 		public VLCMixer() {
 			vlcprocs = new VLCProcess[2];
-			vlcprocs[0] = new VLCProcess();
-			vlcprocs[1] = new VLCProcess();
+			vlcprocs[0] = new VLCProcess("0");
+			vlcprocs[1] = new VLCProcess("1");
 			nextProc = 0;
 			// TODO: remove
 			mixer = this;
@@ -22,6 +23,9 @@ namespace RadioPlayer
 
 		#region IMixer implementation
 		public ISoundObject createSound(MediaFile file) {
+			if (file == null) {
+				return null;
+			}
 			RadioLogger.Logger.LogInformation("Created file for " + file.Name);
 			VLCSoundObject vlcsnd = new VLCSoundObject(file, vlcprocs[nextProc]);
 			nextProc ^= 1;//Toggle nextProc between zero and one
@@ -34,10 +38,10 @@ namespace RadioPlayer
 
 		public void fadeTo(ISoundObject iso, float targetVolume, float time) {
 			int tvolume = Convert.ToInt32(targetVolume);
-			int ttime = Convert.ToInt32(time) * 1000;
+			int ttime = Convert.ToInt32(time * 1000);
 			int cvolume = Convert.ToInt32(iso.Volume);
 			int delta = tvolume - cvolume;
-			if (delta > 0) {
+			if (delta != 0) {
 				int stepTime = 200;
 				int stepsLeft = ttime / stepTime;
 				int stepVolume = delta * stepTime / ttime;
@@ -45,6 +49,9 @@ namespace RadioPlayer
 				Task.Run(async () => {
 					while (stepsLeft > 0) {
 						iso.Volume += stepVolume;
+						if(stepsLeft%5 == 0) {
+							RadioLogger.Logger.LogDebug("Fading ["+stepsLeft+"]: "+iso.Volume);
+						}
 						await Task.Delay(stepTime);
 						stepsLeft --;
 					}

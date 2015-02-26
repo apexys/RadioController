@@ -65,8 +65,12 @@ namespace Configuration
 		}
 		public int[] getInts(string s, int[] init) {
 			try {
-				return JSON.readArray<int>(getString(s, JSON.write(init)), JSON.readInt);
-			} catch {}
+				string str = getString(s, JSON.write(init));
+				init = JSON.readArray<int>(str, JSON.readInt);
+				Console.WriteLine("Ints reading complete "+ str);
+			} catch (Exception ex) {
+				Console.WriteLine("Ints reading failed "+ ex.Message);
+			}
 			return init;
 		}
 	}
