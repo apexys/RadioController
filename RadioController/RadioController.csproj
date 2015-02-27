@@ -59,7 +59,7 @@
     <Compile Include="BasicController.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="AController.cs" />
-    <Compile Include="TimedTriggerMediaFileInsertion.cs" />
+    <Compile Include="TimedTriggerMediaFileInserter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

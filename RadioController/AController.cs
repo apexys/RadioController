@@ -94,8 +94,16 @@ namespace RadioController
 		}
 
 		protected void setSound(ISoundObject sound) {
-			if (currentSO != null) {
-				mixer.fadeTo(currentSO, 0f, SecondsSpentFading);
+			if (currentSO != null ) {
+				ISoundObject tmp = currentSO;
+				if (currentSO.Type == EMediaType.FullVolume) {
+					System.Threading.Tasks.Task.Run(async () => {
+						await System.Threading.Tasks.Task.Delay(SecondsSpentFading * 1000);
+						tmp.Playing = false;
+					});
+				} else {
+					mixer.fadeTo(currentSO, 0f, SecondsSpentFading);
+				}
 			}
 
 			currentSO = sound;
@@ -103,9 +111,14 @@ namespace RadioController
 			lastPosition = TimeSpan.FromSeconds(0);
 
 			if (currentSO != null) {
-				currentSO.Volume = 0;
-				currentSO.Playing = true;
-				mixer.fadeTo(currentSO, 100f, SecondsSpentFading);
+				if (currentSO.Type == EMediaType.FullVolume) {
+					currentSO.Volume = 100;
+					currentSO.Playing = true;
+				} else {
+					currentSO.Volume = 0;
+					currentSO.Playing = true;
+					mixer.fadeTo(currentSO, 100f, SecondsSpentFading);
+				}
 			}
 		}
 
@@ -123,10 +136,11 @@ namespace RadioController
 						lastTimeEqualCounter++;
 					}
 				}
-			
+				
 				if ((currentSO == null)
+				    || currentSO.Ended
 					|| (maxLastTimeEqualCounter > 0 && lastTimeEqualCounter >= maxLastTimeEqualCounter)
-					|| (currentSO.Duration.Subtract(position) <= TimeSpan.FromSeconds(SecondsSpentFading))
+					|| (currentSO.DuratiopnKnown && (currentSO.Duration.Subtract(position) <= TimeSpan.FromSeconds(SecondsSpentFading)))
 					|| startNextNow()) {
 
 					setSound(soundProvider.nextSound());

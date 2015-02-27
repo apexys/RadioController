@@ -142,13 +142,15 @@ namespace RadioPlayer
 							volumeAdjustment = Convert.ToSingle(sp[1]);
 						} catch {
 						}
+					} else {
+						Console.WriteLine("current Adjustment: " + Math.Round(volumeAdjustment, 2).ToString());
 					}
 					break;
 				case "volume":
 					if (sp.Length > 1) {
-						dropData("volume " + int.Parse(sp[1]).ToString());
+						setVolume(Convert.ToInt32(sp[1]));
 					} else {
-						Console.WriteLine(getData("volume"));
+						Console.WriteLine("volume: "+ getVolume().ToString());
 					}
 					break;
 				case "seek":

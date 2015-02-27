@@ -101,6 +101,12 @@ namespace RadioPlayer
 			}
 		}
 
+		public bool Ended {
+			get {
+				return vlcp.getPosition() == -1;
+			}
+		}
+
 		public string Title {
 			get {
 				return mf.Name;

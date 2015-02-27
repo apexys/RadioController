@@ -9,9 +9,10 @@ namespace RadioPlayer
 		bool Playing {get; set;}
 		TimeSpan Position {get; set;}
 		TimeSpan Duration {get;}
-		bool DuratiopnKnown{get;}
+		bool DuratiopnKnown {get;}
+		bool Ended {get;}
 		string Title {get;}
-		EMediaType Type { get;}
+		EMediaType Type {get;}
 	}
 }
 
