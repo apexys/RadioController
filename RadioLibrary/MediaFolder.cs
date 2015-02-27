@@ -8,9 +8,10 @@ namespace RadioLibrary
 {
 	public class MediaFolder
 	{
-		Random r;
+		Random rnd;
 		List<int> lastPlayed;
 		public string[] paths;
+		EMediaType defaultType;
 
 		public string[] Paths {
 			get {
@@ -25,29 +26,30 @@ namespace RadioLibrary
 			string path;
 			lastPlayed = new List<int>();
 			files = new List<MediaFile>();
-			lastIndex = 0;
 
 			for (int i = 0; i<paths.Length; i++) {
 				path = paths[i];
 
-				//Get Media Infos
-				DirectoryInfo di = new DirectoryInfo(path);
-				foreach (FileInfo file in di.GetFiles()) {
-					if (file.Name.Contains(".") && allowedInputs.Contains(file.Extension)) {
-						files.Add(new MediaFile(file.FullName));
-						Logger.LogDebug("Added " + file.Name);
+				if (Directory.Exists(path)) {
+					//Get Media Infos
+					DirectoryInfo di = new DirectoryInfo(path);
+					foreach (FileInfo file in di.GetFiles()) {
+						if (file.Name.Contains(".") && allowedInputs.Contains(file.Extension)) {
+							files.Add(new MediaFile(file.FullName, defaultType));
+							Logger.LogDebug("Added " + file.Name);
+						}
 					}
 				}
 			}
 
-			Logger.LogInformation("Loaded " + files.Count.ToString() + " items from "+Configuration.JSON.write(paths));
+			Logger.LogInformation("Loaded " + files.Count.ToString() + " items from " + Configuration.JSON.write(paths));
 		}
 
 		public MediaFile pickRandomFile() {
 
 			int next;
 			do {
-				next = r.Next(0, files.Count);
+				next = rnd.Next(0, files.Count);
 			} while(lastPlayed.Contains(next));
 
 
@@ -59,9 +61,13 @@ namespace RadioLibrary
 			return files[next];
 		}
 
-		public MediaFolder(string[] folderPaths) {
+		public MediaFolder(string[] folderPaths) : this(folderPaths, EMediaType.Normal) {
+		}
+
+		public MediaFolder(string[] folderPaths, EMediaType type) {
 			this.paths = folderPaths;
-			r = new Random(DateTime.Now.Millisecond);
+			defaultType = type;
+			rnd = new Random(DateTime.Now.Millisecond);
 			Refresh();
 		}
 	}

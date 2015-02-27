@@ -1,6 +1,7 @@
 using System;
 using RadioLibrary;
 using RadioPlayer;
+using RadioLogger;
 using System.Timers;
 using Configuration;
 
@@ -130,7 +131,8 @@ namespace RadioController
 
 					setSound(soundProvider.nextSound());
 				}
-			} catch {
+			} catch (Exception ex) {
+				Logger.LogException(ex);
 			}
 			controller_timer.Start();
 

@@ -20,7 +20,6 @@ namespace RadioPlayer
 			// TODO: remove
 			mixer = this;
 		}
-
 		#region IMixer implementation
 		public ISoundObject createSound(MediaFile file) {
 			if (file == null) {
@@ -49,11 +48,8 @@ namespace RadioPlayer
 				Task.Run(async () => {
 					while (stepsLeft > 0) {
 						iso.Volume += stepVolume;
-						if(stepsLeft%5 == 0) {
-							RadioLogger.Logger.LogDebug("Fading ["+stepsLeft+"]: "+iso.Volume);
-						}
 						await Task.Delay(stepTime);
-						stepsLeft --;
+						stepsLeft--;
 					}
 					iso.Volume = targetVolume;
 				});

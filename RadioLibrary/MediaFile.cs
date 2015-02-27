@@ -22,15 +22,9 @@ namespace RadioLibrary
 			}
 		}
 
-		public enum MediaType
-		{
-			Normal,
-			Jingle
-		}
+		private EMediaType type;
 
-		private MediaType type;
-
-		public MediaType Type {
+		public EMediaType Type {
 			get {
 				return type;
 			}
@@ -44,11 +38,11 @@ namespace RadioLibrary
 			}
 		}
 
-		public MediaFile(string path, MediaType type) :
-			this(path, MediaType.Normal) {
+		public MediaFile(string path) :
+			this(path, EMediaType.Normal) {
 		}
 
-		public MediaFile(string path, MediaType type) {
+		public MediaFile(string path, EMediaType type) {
 			this.path = path;
 			this.type = type;
 

@@ -37,7 +37,8 @@ namespace RadioPlayer
 				} catch {
 				}
 				mplayer_process.Kill();
-			} catch {
+			} catch (Exception ex) {
+				Logger.LogException(ex);
 				//Nothing to do here, sometimes it has already collected the garbage and sometimes not
 			}
 			refresherTimer.Dispose();
@@ -114,7 +115,8 @@ namespace RadioPlayer
 				mplayer_input.WriteLine("get_property volume");
 				mplayer_input.WriteLine("get_time_pos");
 				mplayer_input.WriteLine("get_time_length");
-			} catch {
+			} catch (Exception ex) {
+				Logger.LogException(ex);
 			}
 		}
 
@@ -171,7 +173,8 @@ namespace RadioPlayer
 			try {
 				mplayer_input.WriteLine("pause");
 				mplayer_input.Flush();
-			} catch {
+			} catch (Exception ex) {
+				Logger.LogException(ex);
 			}
 		}
 
@@ -218,7 +221,8 @@ namespace RadioPlayer
 			try {
 				mplayer_input.WriteLine("set_property volume " + volume.ToString());
 				mplayer_input.Flush();
-			} catch {
+			} catch (Exception ex) {
+				Logger.LogException(ex);
 			}
 		}
 
@@ -248,7 +252,8 @@ namespace RadioPlayer
 				mplayer_version_info.UseShellExecute = false;
 				Process mplayer_version_process = Process.Start(mplayer_version_info);
 				return mplayer_version_process.StandardOutput.ReadLine();
-			} catch {
+			} catch (Exception ex) {
+				Logger.LogException(ex);
 				return "";
 			}
 		}

@@ -28,7 +28,10 @@ namespace RadioLogger
 					;
 				}
 			}
-			System.Diagnostics.Debug.WriteLine(line);
+			try {
+				System.Diagnostics.Debug.WriteLine(line);
+			} catch {
+			}
 		}
 
 		~Logger() {
@@ -42,49 +45,77 @@ namespace RadioLogger
 		}
 
 		public static void LogLine() {
-			Console.WriteLine();
+			try {
+				Console.WriteLine();
+			} catch {
+			}
 		}
 
 		public static void LogNormal(string message) {
-			Console.ResetColor();
-			Console.WriteLine(getTimeString() + message);
+			try {
+				Console.ResetColor();
+				Console.WriteLine(getTimeString() + message);
+			} catch {
+			}
 			writeLine('N' + message);
 		}
 
 		public static void LogGood(string message) {
-			Console.ForegroundColor = ConsoleColor.DarkGreen;
-			Console.WriteLine(getTimeString() + message);
-			Console.ResetColor();
+			try {
+				Console.ForegroundColor = ConsoleColor.DarkGreen;
+				Console.WriteLine(getTimeString() + message);
+				Console.ResetColor();
+			} catch {
+			}
 			writeLine('G' + message);
 		}
 
 		public static void LogInformation(string message) {
-			Console.ForegroundColor = ConsoleColor.Cyan;
-			Console.WriteLine(getTimeString() + message);
-			Console.ResetColor();
+			try {
+				Console.ForegroundColor = ConsoleColor.Cyan;
+				Console.WriteLine(getTimeString() + message);
+				Console.ResetColor();
+			} catch {
+			}
 			writeLine('I' + message);
 		}
 
 		public static void LogWarning(string message) {
-			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine(getTimeString() + message);
-			Console.ResetColor();
+			try {
+				Console.ForegroundColor = ConsoleColor.Yellow;
+				Console.WriteLine(getTimeString() + message);
+				Console.ResetColor();
+			} catch {
+			}
 			writeLine('W' + message);
 		}
 
 		public static void LogError(string message) {
-			Console.ForegroundColor = ConsoleColor.Red;
-			Console.WriteLine(getTimeString() + message);
-			Console.ResetColor();
+			try {
+				Console.ForegroundColor = ConsoleColor.Red;
+				Console.WriteLine(getTimeString() + message);
+				Console.ResetColor();
+			} catch {
+			}
 			writeLine('E' + message);
 		}
 
 		public static void LogDebug(string message) {
 			if (logDebugMessages) {
-				Console.ForegroundColor = ConsoleColor.DarkGray;
-				Console.WriteLine(getTimeString() + message);
-				Console.ResetColor();
+				try {
+					Console.ForegroundColor = ConsoleColor.DarkGray;
+					Console.WriteLine(getTimeString() + message);
+					Console.ResetColor();
+				} catch {
+				}
 				writeLine('D' + message);
+			}
+		}
+
+		public static void LogException(Exception ex) {
+			try {
+				Console.Error.WriteLine(ex.ToString());
+			} catch {
 			}
 		}
 	}

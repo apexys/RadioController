@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using RadioLibrary;
+using RadioLogger;
 
 namespace RadioPlayer
 {
@@ -10,25 +11,17 @@ namespace RadioPlayer
 		VLCProcess vlcp;
 		bool playing;
 		TimeSpan duration;
+		bool durationKnown = false;
 		float volume;
 
 		public VLCSoundObject(MediaFile mf, VLCProcess vlcp) {
-			int i, d = 0;
 			this.mf = mf;
 			this.vlcp = vlcp;
 			vlcp.setFile(mf);
 			playing = false;
-			for (i=0; i<50; i++) {
-				d = vlcp.getLength();
-				if (d > 0) {
-					break;
-				}
-				if (d < 0) {
-					throw new ArgumentException("Sound not loaded");
-				}
-				Thread.Sleep(20);
+			if (!durationKnown) {
+				getDuration();
 			}
-			duration = TimeSpan.FromSeconds(Convert.ToDouble(d));
 			volume = Convert.ToSingle(vlcp.getVolume());
 		}
 		#region ISoundObject implementation
@@ -71,15 +64,52 @@ namespace RadioPlayer
 			}
 		}
 
+		void getDuration() {
+			int d = vlcp.getLength();
+			if (d < 0) {
+				throw new ArgumentException("Sound not loaded");
+			}
+			duration = TimeSpan.FromSeconds(Convert.ToDouble(d));
+			if (duration.TotalSeconds > 0) {
+				durationKnown = true;
+			}
+		}
+
 		public TimeSpan Duration {
 			get {
+				if (!durationKnown) {
+					try {
+						getDuration();
+					} catch (Exception ex) {
+						Logger.LogException(ex);
+					}
+				}
 				return duration;
+			}
+		}
+
+		public bool DuratiopnKnown {
+			get {
+				if (!durationKnown) {
+					try {
+						getDuration();
+					} catch (Exception ex) {
+						Logger.LogException(ex);
+					}
+				}
+				return durationKnown;
 			}
 		}
 
 		public string Title {
 			get {
 				return mf.Name;
+			}
+		}
+
+		public EMediaType Type {
+			get {
+				return mf.Type;
 			}
 		}
 		#endregion

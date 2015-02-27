@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RadioLogger;
 
 namespace Configuration
 {
@@ -60,16 +61,17 @@ namespace Configuration
 		public string[] getStrings(string s, string[] init) {
 			try {
 				return JSON.readArray<string>(getString(s, JSON.write(init)), JSON.readString);
-			} catch {}
+			} catch (Exception ex) {
+				Logger.LogException(ex);
+			}
 			return init;
 		}
 		public int[] getInts(string s, int[] init) {
 			try {
 				string str = getString(s, JSON.write(init));
 				init = JSON.readArray<int>(str, JSON.readInt);
-				Console.WriteLine("Ints reading complete "+ str);
 			} catch (Exception ex) {
-				Console.WriteLine("Ints reading failed "+ ex.Message);
+				Logger.LogException(ex);
 			}
 			return init;
 		}

@@ -16,11 +16,12 @@ namespace RadioController
 		static MediaFolder songs;
 		static MediaFolder jingles;
 		static MediaFolder news;
+
 		public static void Main(string[] args) {
 
 			Settings.setSettings(new FileSettings("../../../Settings.conf"));
 
-
+			/*
 			foreach (KeyValuePair<string, string> pair in ((FileSettings)(Settings.getSettings())).config) {
 				Logger.LogGood(pair.Key + " => " + pair.Value);
 			}
@@ -31,9 +32,9 @@ namespace RadioController
 			Console.WriteLine(fi.Directory + " -/- " + fi.Directory.Name + " -/- " + fi.Directory.FullName);
 
 
-			string[] songFolders = Settings.getStrings("media.songs", new string[] {});
-			string[] jingleFolders = Settings.getStrings("media.jingles", new string[] {});
-			string[] newsFolders = Settings.getStrings("media.news", new string[] {});
+			string[] songFolders = Settings.getStrings("media.songs", new string[] { });
+			string[] jingleFolders = Settings.getStrings("media.jingles", new string[] { });
+			string[] newsFolders = Settings.getStrings("media.news", new string[] { });
 
 			//2. Create a Controller
 			TimedTrigger jinglett = new TimedTrigger();
@@ -56,23 +57,9 @@ namespace RadioController
 				}
 			});
 
-
-			//string basepath = "/home/apexys/content"; // @"/home/streamer/radiosoftware/content";
-
-			/*
-			Controller ctrl = new Controller(
-				songs[0],//basepath + Path.DirectorySeparatorChar + "songs",
-				jingles[0],//basepath + Path.DirectorySeparatorChar + "jingles",
-				news[0],//basepath + Path.DirectorySeparatorChar + "news",
-				jinglett,
-				newstt,
-				"http://134.245.206.50:8080/");
-			ctrl.Start();
-			*/
-
 			VLCMixer mixer = new VLCMixer();
 			songs = new MediaFolder(songFolders);
-			jingles = new MediaFolder(jingleFolders);
+			jingles = new MediaFolder(jingleFolders, EMediaType.FullVolume);
 			news = new MediaFolder(newsFolders);
 
 			IMediaFileProvider provider = new RandomMediaFileProvider(songs);
@@ -80,6 +67,7 @@ namespace RadioController
 			provider = new TimedTriggerMediaFileInserter(provider, newstt, new RandomMediaFileProvider(news));
 
 			IController ctrl = new BasicController(mixer, new MediafileToSoundObjectProvider(mixer, provider));
+			ctrl.Start();
 
 			//3. Run for your life!
 			Console.Write("Everything running, type ");
@@ -88,7 +76,13 @@ namespace RadioController
 			Console.ResetColor();
 			Console.WriteLine(" to quit.");
 
-			interact(ctrl);
+			while(true) {
+				try {
+					interact(ctrl);
+				} catch (Exception ex) {
+					Logger.LogException(ex);
+				}
+			}
 		}
 
 		static void interact(IController ctrl) {
@@ -110,10 +104,13 @@ namespace RadioController
 							"vlc <id>");
 						break;
 					case "exit":
-						Console.WriteLine("Terminting program");
-						//TODO: Make sure all mplayers DIE here
-						//ctrl.Dispose();
-						Environment.Exit(0);
+						Console.WriteLine("Do you really want to exit this programm? y/n: ");
+						if (Console.ReadLine() == "y") {
+							Console.WriteLine("Terminting program");
+							//TODO: Make sure all mplayers DIE here
+							//ctrl.Dispose();
+							Environment.Exit(0);
+						}
 						break;
 					case "s":
 					case "stop":
@@ -145,7 +142,7 @@ namespace RadioController
 					///ctrl.Rescan();
 					//Logger.LogNormal("Scan done");
 					//Logger.LogLine();
-					//break;
+						break;
 					case "skip":
 						Logger.LogNormal("Skipping current action");
 						ctrl.Skip();

@@ -1,5 +1,6 @@
 using System;
 using RadioLibrary;
+using RadioLogger;
 
 namespace RadioPlayer
 {
@@ -23,8 +24,8 @@ namespace RadioPlayer
 			for (i=0; i<10; i++) {
 				try {
 					return mixer.createSound(provider.nextMediaFile());
-				} catch {
-					;
+				} catch (Exception ex) {
+					Logger.LogException(ex);
 				}
 			}
 			return null;

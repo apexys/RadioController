@@ -23,7 +23,6 @@ namespace RadioController
 		protected override MediaFile getInsertedMediaFile() {
 			if (trigger.PreviousTriggerChanged) {
 				MediaFile f = provider.nextMediaFile();
-				RadioLogger.Logger.LogGood("Trigger insertion occured "+f.ToString());
 				return f;
 			}
 			return null;

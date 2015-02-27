@@ -18,6 +18,9 @@ namespace Configuration
 			string basis = "";
 			bool blockComment = false;
 			try {
+				if (!File.Exists(configFile)) {
+					return;
+				}
 				using (StreamReader fi = new StreamReader(configFile)) {
 					while (!fi.EndOfStream) {
 						string line;
@@ -76,7 +79,8 @@ namespace Configuration
 					}
 				}
 			} catch (Exception ex) {
-				Logger.LogError("Could not read the config file \"" + configFile + "\" "+ex.Message + ex.StackTrace.ToString());
+				Logger.LogException(ex);
+				Logger.LogError("Could not read the config file \"" + configFile + "\" "+ex.Message);
 			}
 		}
 

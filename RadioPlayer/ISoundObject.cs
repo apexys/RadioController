@@ -1,4 +1,5 @@
 using System;
+using RadioLibrary;
 
 namespace RadioPlayer
 {
@@ -8,7 +9,9 @@ namespace RadioPlayer
 		bool Playing {get; set;}
 		TimeSpan Position {get; set;}
 		TimeSpan Duration {get;}
+		bool DuratiopnKnown{get;}
 		string Title {get;}
+		EMediaType Type { get;}
 	}
 }
 
