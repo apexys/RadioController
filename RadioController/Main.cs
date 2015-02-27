@@ -49,13 +49,7 @@ namespace RadioController
 				newstt.addMinuteTrigger(trigger[t]);
 			}
 
-			Task.Run(async () => {
-				while (true) {
-					jinglett.checkTriggers();
-					newstt.checkTriggers();
-					await Task.Delay(500);
-				}
-			});
+
 
 			VLCMixer mixer = new VLCMixer();
 			songs = new MediaFolder(songFolders);
@@ -65,9 +59,20 @@ namespace RadioController
 			IMediaFileProvider provider = new RandomMediaFileProvider(songs);
 			provider = new TimedTriggerMediaFileInserter(provider, jinglett, new RandomMediaFileProvider(jingles));
 			provider = new TimedTriggerMediaFileInserter(provider, newstt, new RandomMediaFileProvider(news));
+			provider = new StreamInserter(provider,
+			                              Settings.getInt("livestream.port", 3124),
+			                              Settings.getString("livestream.address", "http://134.245.206.50:8080"));
 
-			IController ctrl = new BasicController(mixer, new MediafileToSoundObjectProvider(mixer, provider));
+			BasicController ctrl = new BasicController(mixer, new MediafileToSoundObjectProvider(mixer, provider));
 			ctrl.Start();
+
+			Task.Run(async () => {
+				while (true) {
+					jinglett.checkTriggers();
+					newstt.checkTriggers();
+					await Task.Delay(500);
+				}
+			});
 
 			//3. Run for your life!
 			Console.Write("Everything running, type ");

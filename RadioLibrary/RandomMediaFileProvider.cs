@@ -16,6 +16,10 @@ namespace RadioLibrary
 		public MediaFile nextMediaFile() {
 			return mediaFolder.pickRandomFile();
 		}
+
+		public bool interject() {
+			return false;
+		}
 		#endregion
 	}
 }

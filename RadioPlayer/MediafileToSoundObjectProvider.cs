@@ -30,6 +30,10 @@ namespace RadioPlayer
 			}
 			return null;
 		}
+
+		public bool interject() {
+			return provider.interject();
+		}
 		#endregion
 	}
 }

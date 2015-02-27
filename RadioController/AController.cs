@@ -9,7 +9,7 @@ namespace RadioController
 {
 	public abstract class AController : IDisposable, IController
 	{
-		const float maxVolume = 255f;
+		const float maxVolume = 100f;
 
 		protected IMixer mixer;
 		ISoundObjectProvider soundProvider;
@@ -139,6 +139,7 @@ namespace RadioController
 				}
 				
 				if ((currentSO == null)
+				    || soundProvider.interject()
 				    || currentSO.Ended
 					|| (maxLastTimeEqualCounter > 0 && lastTimeEqualCounter >= maxLastTimeEqualCounter)
 					|| (currentSO.DuratiopnKnown && (currentSO.Duration.Subtract(position) <= TimeSpan.FromSeconds(SecondsSpentFading)))

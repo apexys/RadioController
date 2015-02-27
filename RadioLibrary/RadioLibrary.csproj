@@ -41,6 +41,8 @@
     <Compile Include="RandomMediaFileProvider.cs" />
     <Compile Include="AMediaFileInserter.cs" />
     <Compile Include="EMediaType.cs" />
+    <Compile Include="StreamInserter.cs" />
+    <Compile Include="HTTPServer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

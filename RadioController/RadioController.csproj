@@ -54,7 +54,6 @@
     <Compile Include="RandomShow.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="TimedTrigger.cs" />
-    <Compile Include="HTTPServer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="BasicController.cs" />
     <Compile Include="IController.cs" />
