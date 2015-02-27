@@ -28,10 +28,7 @@ namespace RadioLibrary
 		public override bool interject() {
 			if (htserver.State != previousState) {
 				previousState = htserver.State;
-				if( htserver.State) {
-					RadioLogger.Logger.LogInformation ("Returning true at interject");
 					return true;
-				}
 			}
 			return base.interject();
 
