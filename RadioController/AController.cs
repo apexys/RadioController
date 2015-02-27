@@ -9,6 +9,7 @@ namespace RadioController
 {
 	public abstract class AController : IDisposable, IController
 	{
+		const float maxVolume = 255f;
 
 		protected IMixer mixer;
 		ISoundObjectProvider soundProvider;
@@ -46,7 +47,7 @@ namespace RadioController
 		public void Start() {
 			controller_timer.Start();
 			if (currentSO != null) {
-				currentSO.Volume = 100;
+				currentSO.Volume = maxVolume;
 				currentSO.Playing = true;
 			}
 		}
@@ -81,7 +82,7 @@ namespace RadioController
 			if (currentSO != null) {
 				currentSO.Volume = 0;
 				currentSO.Playing = true;
-				mixer.fadeTo(currentSO, 100, SecondsSpentFading);
+				mixer.fadeTo(currentSO, maxVolume, SecondsSpentFading);
 			}
 		}
 
@@ -112,12 +113,12 @@ namespace RadioController
 
 			if (currentSO != null) {
 				if (currentSO.Type == EMediaType.FullVolume) {
-					currentSO.Volume = 100;
+					currentSO.Volume = maxVolume;
 					currentSO.Playing = true;
 				} else {
 					currentSO.Volume = 0;
 					currentSO.Playing = true;
-					mixer.fadeTo(currentSO, 100f, SecondsSpentFading);
+					mixer.fadeTo(currentSO, maxVolume, SecondsSpentFading);
 				}
 			}
 		}
