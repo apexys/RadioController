@@ -16,7 +16,7 @@ namespace RadioPlayer
 		StreamReader sout;
 		StreamWriter sin;
 		bool kill = false;
-		float volumeAdjustment = 1f;
+		float volumeAdjustment = 2.55f;
 		public StreamWriter debugStream;
 		string id;
 		Object communicationLock = new object();
@@ -136,7 +136,8 @@ namespace RadioPlayer
 				sp[0] = sp[0].ToLower();
 
 				switch (sp[0]) {
-				case "volumeAdjustment":
+				case "volumeadjustment":
+				case "voladj":
 					if (sp.Length > 1) {
 						try {
 							volumeAdjustment = Convert.ToSingle(sp[1]);
