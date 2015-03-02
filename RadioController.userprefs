@@ -2,11 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="RadioController/Main.cs">
     <Files>
-      <File FileName="RadioController/Main.cs" Line="84" Column="6" />
+      <File FileName="RadioController/Main.cs" Line="23" Column="5" />
+      <File FileName="RadioController/AController.cs" Line="139" Column="6" />
+      <File FileName="RadioPlayer/ISoundObject.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
+          <Node name="Configuration" expanded="True" />
           <Node name="RadioController" expanded="True">
             <Node name="Main.cs" selected="True" />
           </Node>

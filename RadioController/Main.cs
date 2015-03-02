@@ -20,7 +20,6 @@ namespace RadioController
 		public static void Main(string[] args) {
 
 			Settings.setSettings(new FileSettings("../../../Settings.conf"));
-
 			/*
 			foreach (KeyValuePair<string, string> pair in ((FileSettings)(Settings.getSettings())).config) {
 				Logger.LogGood(pair.Key + " => " + pair.Value);
@@ -48,8 +47,6 @@ namespace RadioController
 			for (int t = 0; t < trigger.Length; t++) {
 				newstt.addMinuteTrigger(trigger[t]);
 			}
-
-
 
 			VLCMixer mixer = new VLCMixer();
 			songs = new MediaFolder(songFolders);

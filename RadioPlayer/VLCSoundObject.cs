@@ -24,6 +24,7 @@ namespace RadioPlayer
 			}
 			volume = Convert.ToSingle(vlcp.getVolume());
 		}
+
 		#region ISoundObject implementation
 		public float Volume {
 			get {
