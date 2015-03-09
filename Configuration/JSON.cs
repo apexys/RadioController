@@ -183,19 +183,26 @@ namespace Configuration
 			if (pos < len && str[pos] == '[') {
 				res = new List<T>();
 				pos++;
+				
+				// skip initial space
+				while (pos < len && (str[pos] == ' ' || str[pos] == '\t')) {
+					pos++;
+				}
 
 				while (true) {
 
-					res.Add(reader(str, ref pos));
+					if (str[pos] != ']') {
+						res.Add(reader(str, ref pos));
 
-					// skip space
-					while (pos < len && (str[pos] == ' ' || str[pos] == '\t')) {
-						pos++;
-					}
+						// skip space
+						while (pos < len && (str[pos] == ' ' || str[pos] == '\t')) {
+							pos++;
+						}
 
-					// check correckt string seperator
-					if (pos >= len || (str[pos] != ',' && str[pos] != ']')) {
-						throw new InvalidCastException("incorrect JSON string array");
+						// check correckt string seperator
+						if (pos >= len || (str[pos] != ',' && str[pos] != ']')) {
+							throw new InvalidCastException("incorrect JSON array");
+						}
 					}
 					if (str[pos] == ']') {
 						return res.ToArray();
@@ -203,7 +210,7 @@ namespace Configuration
 					pos++;
 				}
 			} else {
-				throw new InvalidCastException("incorrect JSON string array");
+				throw new InvalidCastException("incorrect JSON array");
 			}
 		}
 	}

@@ -43,6 +43,9 @@
     <Compile Include="EMediaType.cs" />
     <Compile Include="StreamInserter.cs" />
     <Compile Include="HTTPServer.cs" />
+    <Compile Include="SectionInserter.cs" />
+    <Compile Include="SectionTimer.cs" />
+    <Compile Include="CronTimer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

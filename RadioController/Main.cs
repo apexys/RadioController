@@ -53,7 +53,46 @@ namespace RadioController
 			jingles = new MediaFolder(jingleFolders, EMediaType.FullVolume);
 			news = new MediaFolder(newsFolders);
 
+			// setting up the media provider
 			IMediaFileProvider provider = new RandomMediaFileProvider(songs);
+
+			// inserting sections
+			for (int i = Settings.getInt("media.sections.length", 0)-1; i>=0; i--) {
+				if (Settings.getBool("media.sections["+i+"].active", false)) {
+
+					CronTimer start, end;
+					string cronline = Settings.getString("media.sections["+i+"].start", "");
+
+					if (cronline!="") {
+						start = new CronTimer(cronline);
+					} else {
+						start = new CronTimer(Settings.getString("media.sections["+i+"].start.minute", ""),
+						                      Settings.getString("media.sections["+i+"].start.hour", ""),
+						                      Settings.getString("media.sections["+i+"].start.day", ""),
+						                      Settings.getString("media.sections["+i+"].start.month", ""),
+						                      Settings.getString("media.sections["+i+"].start.dayOfWeek", ""));
+					}
+
+					cronline = Settings.getString("media.sections["+i+"].end", "");
+
+					if (cronline!="") {
+						end = new CronTimer(cronline);
+					} else {
+						end = new CronTimer(Settings.getString("media.sections["+i+"].end.minute", ""),
+						                    Settings.getString("media.sections["+i+"].end.hour", ""),
+						                    Settings.getString("media.sections["+i+"].end.day", ""),
+						                    Settings.getString("media.sections["+i+"].end.month", ""),
+						                    Settings.getString("media.sections["+i+"].end.dayOfWeek", ""));
+					}
+
+					provider = new SectionInserter(provider,
+					                               new RandomMediaFileProvider(
+						new MediaFolder(Settings.getStrings("media.sections["+i+"].folders", new string[] {}))),
+					                               new SectionTimer(start, end));
+					//Console.WriteLine("Added Section from " + start.NextEvent + " to " + end.NextEvent);
+				}
+			}
+
 			provider = new TimedTriggerMediaFileInserter(provider, jinglett, new RandomMediaFileProvider(jingles));
 			provider = new TimedTriggerMediaFileInserter(provider, newstt, new RandomMediaFileProvider(news));
 			provider = new StreamInserter(provider,
@@ -92,6 +131,14 @@ namespace RadioController
 				string[] input = Console.ReadLine().Trim().Split(' ');
 				if (input.Length > 0) {
 					switch (input[0].ToLower()) {
+					case "c":
+						CronTimer ct = new CronTimer(input[1], input[2], input[3], input[4], input[5]);
+						Console.WriteLine(ct.NextEvent);
+						for (int i = 0; i<9; i++) {
+							ct.next();
+							Console.WriteLine(ct.NextEvent);
+						}
+						break;
 					case "?":
 					case "help":
 						Console.WriteLine(
@@ -103,7 +150,8 @@ namespace RadioController
 							"f(ade)o(ut)\n" +
 							"rescan\n" +
 							"skip\n" +
-							"vlc <id>");
+							"vlc <id>\n" +
+							"c <CRON string> -- prints the next 10 occurences of a cron event");
 						break;
 					case "exit":
 						Console.WriteLine("Do you really want to exit this programm? y/n: ");
